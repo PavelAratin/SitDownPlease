@@ -45,15 +45,97 @@ input{
   border-radius: 10px;
   transition: background 0.2s linear;
   border: none;
+  outline: none;
   cursor: pointer;
   &:hover{
     background-color: $colorPrimaryLight;
   }
-  &:focus{
+  &:focus:not(:active){
     background-color: $colorPrimaryLight;
-    outline-color: $colorPrimaryShade;
+    -webkit-box-shadow: 0 0 0 2px rgba(112, 51, 172, 1) inset;
+    -moz-box-shadow: 0 0 0 2px rgba(112, 51, 172, 1) inset;
+    box-shadow: 0 0 0 2px rgba(112, 51, 172, 1) inset;
   }
   &:active{
     background-color: $colorPrimaryShade;
   }
+}
+.button-card{
+  border: 2px solid $colorPrimary;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 15px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $colorPrimary;
+  cursor: pointer;
+  transition: background 0.2s linear,
+  color 0.2s linear,
+  border-color 0.2s linear;
+  outline: none;
+  &:hover{
+    background-color: $colorPrimary;
+    color: $colorWhite;
+  }
+  &:focus{
+    background-color: $colorPrimaryLight;
+    color: $colorWhite;
+  }
+  &:active{
+    background-color: $colorPrimaryShade;
+    border-color: $colorPrimaryShade;
+  }
+}
+.title-h2{
+  font-size: 32px;
+  color: $colorBlack;
+  font-weight: 400;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+  display: none;
+}
+.swiper-button-next,
+.swiper-button-prev{
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  position: static;
+  margin: 0;
+  transition: background 0.2s linear;
+  outline: none;
+}
+.swiper-button-next{
+  background-image: url('../img/form-btn.svg');
+  &:hover{
+    background-image: url('../img/form-btn-hover.svg');
+  }
+  &:focus{
+    background-image: url('../img/form-btn-focus.svg');
+  }
+}
+.swiper-button-prev{
+  background-image: url('../img/form-btn.svg');
+  transform: rotate(180deg);
+  &:hover{
+    background-image: url('../img/form-btn-hover.svg');
+    transform: rotate(180deg);
+  }
+  &:focus{
+    background-image: url('../img/form-btn-focus.svg');
+    transform: rotate(180deg);
+  }
+}
+.buttons-swiper{
+  position: absolute;
+  right: 40px;
+  top: 2px;
+  width: 77px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

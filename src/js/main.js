@@ -1,4 +1,4 @@
 import { dropdownCategoryHeader } from "./dropdownCategoryHeader";
-import {swiper} from './heroSwiper';
+import {heroSwiper} from './swiper';
 dropdownCategoryHeader();
 swiper()
