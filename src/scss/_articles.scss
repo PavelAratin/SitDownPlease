@@ -1,0 +1,37 @@
+.articles{
+  padding-bottom: 68px;
+  &__container{
+    position: relative;
+  }
+  &__title{
+    margin-bottom: 23px;
+  }
+  &__img{
+    display: block;
+    width: 100%;
+    max-width: 624px;
+    height: auto;
+  }
+  &__card-body{
+    background-color: $colorGreyLight;
+    border-radius: 0px 0px 10px 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+  }
+  &__text{
+    font-size: 24px;
+    color: $colorBlack;
+    max-width: 514px;
+    line-height: 1.4;
+    padding-bottom: 20px;
+    &--two{
+      max-width: 567px;
+    }
+  }
+  &__button{
+    width: fit-content;
+    margin-top: auto;
+  }
+}

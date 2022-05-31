@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="swiper/swiper.min.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./swiper/swiper.min.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
   <title>SitDownPlease</title>
 </head>
 <body>
@@ -17,9 +17,15 @@
         @include('htmlPartials/hero.html')
         @include('htmlPartials/offers.html')
         @include('htmlPartials/rating.html')
-
+        @include('htmlPartials/promo.html')
+        @include('htmlPartials/topCategory.html')
+        @include('htmlPartials/articles.html')
+        @include('htmlPartials/form.html')
       </main>
+      @include('htmlPartials/footer.html')
   </div>
+  <script src="./formValidate/justValidate.min.js"></script>
+  <script src="./formValidate/inputMask.min.js"></script>
   <script src="./swiper/swiper.min.js"></script>
   <script src="./js/main.js"></script>
 </body>

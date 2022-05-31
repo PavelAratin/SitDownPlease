@@ -109,6 +109,11 @@ const normalizeToApp = () => {
   return src('./src/normalize/normalize.css')
     .pipe(dest('./app/css/'))
 }
+//подключение валидыции формы к проету
+const formValidateToApp = () =>{
+  return src('./src/formValidate/*.js')
+  .pipe(dest('./app/formValidate'))
+}
 
 //функция для слежения за файлами 
 const watchFiles = () => {
@@ -135,11 +140,12 @@ exports.fileInclude = htmlInclude;
 exports.fonts = fonts;
 exports.clean = clean;
 exports.normalizeToApp = normalizeToApp;
+exports.formValidateToApp = formValidateToApp;
 exports.swipertToApp = swipertToApp;
 exports.watchFiles = watchFiles;
 
 //в дефолтном таске мы используем функции(вызываются первый раз перед вотчингом)
-exports.default = series(clean, parallel(htmlInclude, scipts,swipertToApp, fonts, imgToApp, svgSprites), styles, normalizeToApp, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scipts,swipertToApp,formValidateToApp, fonts, imgToApp, svgSprites), styles, normalizeToApp, watchFiles);
 //код для build-версии
 //функция для работы со скриптами
 const sciptsBuild = () => {
@@ -188,4 +194,4 @@ const tinypng = () => {
     .pipe(dest('./app/img'))
 }
 //dev-сборка
-exports.build = series(clean, parallel(htmlInclude, sciptsBuild,swipertToApp, fonts, imgToApp, svgSprites), stylesBuild,normalizeToApp, tinypng);
+exports.build = series(clean, parallel(htmlInclude, sciptsBuild,swipertToApp,formValidateToApp, fonts, imgToApp, svgSprites), stylesBuild,normalizeToApp, tinypng);

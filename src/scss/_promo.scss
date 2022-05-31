@@ -1,0 +1,23 @@
+.promo{
+  padding-top: 155px;
+  padding-bottom: 151px;
+  background-image: url('../img/promo-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 68px;
+  &__title{
+    color: $colorGold;
+    font-family: "PlayfairDisplay";
+    font-size: 60px;
+    margin-bottom: 3px;
+  }
+  &__subtitle{
+    font-size: 48px;
+    margin-bottom: 108px;
+    color: $colorWhite;
+  }
+  &__button{
+    padding: 20px 32px;
+  }
+}

@@ -1,0 +1,146 @@
+.top-category{
+  padding-bottom: 66px;
+  &__title-top{
+    margin-bottom: 23px;
+  }
+  .top-category__cards{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 32px;
+  }
+  &__card{
+    border-radius: 10px;
+    background-color: $colorGreyLight;
+    padding: 30px 30px 30px 0;
+    &--divan,
+    &--cresla{
+      grid-column: span 3;
+    }
+    &--crovat,
+    &--tumbi,
+    &--stuli{
+      grid-column: span 2;
+    }
+  }
+  &__list{
+    color: $colorGrey;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    margin-bottom: 15px;
+  }
+  &__item:not(:last-child){
+    margin-right: 30px;
+  }
+  &__link{
+    position: relative;
+    transition: color 0.2s linear;
+    outline: none;
+    &::before{
+      content: '';
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      bottom: -3px;
+      left: -3px;
+      background-color: $colorFocuselement;
+      transform: scale(0);
+      transition: transform 0.2s linear;
+    }
+    &:hover{
+      color: $colorPrimary;
+    }
+    &:focus:not(:hover)::before{
+      transform: scale(1);
+    }
+    &:active{
+      color: $colorPrimaryShade;
+    }
+  }
+  &__link-text{
+    position: relative;
+  }
+  &__title{
+    color: $colorBlack;
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 30px;
+    margin-bottom: 33px;
+  }
+  &__img{
+    margin-bottom: 25px;
+    &--divan{
+      width: 100%;
+      max-width: 515px;
+      height: auto;
+    }
+    &--creslo{
+      width: 100%;
+      max-width: 515px;
+      height: auto;
+    }
+    &--crovat{
+      width: 100%;
+      max-width: 306px;
+      height: auto;
+    }
+    &--tumbi{
+      width: 100%;
+      max-width: 330px;
+      height: auto;
+    }
+    &--stuli{
+      width: 100%;
+      max-width: 258px;
+      height: auto;
+    }
+  }
+  &__link-incatalog{
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    width: fit-content;
+    color: $colorPrimary;
+    background-image: url('../img/catalog-link.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    line-height: 1.5;
+    padding-right: 30px;
+    margin-left: 30px;
+    position: relative;
+    transition: background 0.2s linear,
+    color 0.2s linear;
+    outline: none;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 72%;
+      height: 2px;
+      display: block;
+      background-color: $colorPrimary;
+      bottom: -2px;
+      transform: scale(0);
+      transition: transform 0.2s linear,
+      background 0.2s linear;
+    }
+    &:hover::before,
+    &:focus::before,
+    &:active::before{
+      transform: scale(1);
+    }
+    &:active::before{
+      background-color: $colorPrimaryShade;
+    }
+    &:hover{
+      background-image: url('../img/catalog-link-hover.svg');
+    }
+    &:focus{
+      background-image: url('../img/catalog-link-focus.svg');
+    }
+    &:active{
+      background-image: url('../img/catalog-link-active.svg');
+      color: $colorPrimaryShade;
+    }
+  }
+}
