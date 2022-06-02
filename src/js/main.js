@@ -1,8 +1,14 @@
 import { dropdownCategoryHeader } from "./dropdownCategoryHeader";
+import { mobileMenu } from "./mobileMenu";
+import { cardsTopRating } from "./cardsTopRating";
+import { getRangeSlider } from "./rangeSlider";
 import { heroSwiper } from './swiper';
 import { offersSwiper } from './swiper';
 import { articlesSwiper } from './swiper';
 dropdownCategoryHeader();
+mobileMenu();
+cardsTopRating();
+getRangeSlider();
 
 //маска для телефона
 let inputs = document.querySelectorAll('input[type="tel"]');

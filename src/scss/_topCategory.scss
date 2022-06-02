@@ -82,8 +82,8 @@
     }
     &--crovat{
       width: 100%;
-      max-width: 306px;
       height: auto;
+      max-width: 306px;
     }
     &--tumbi{
       width: 100%;
@@ -112,6 +112,9 @@
     transition: background 0.2s linear,
     color 0.2s linear;
     outline: none;
+    &--block-mobile{
+      display: none;
+    }
     &::before{
       content: '';
       position: absolute;

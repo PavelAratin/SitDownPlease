@@ -1,0 +1,95 @@
+.catalog-filtres{
+  &__title{
+    color: $colorBlack;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  &__chekbox-label{
+    color: $colorGreyShade;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  &__list{
+    margin-bottom: 9px;
+  }
+  &__item:first-child{
+    font-weight: 600;
+    font-size: 16px;
+    color: $colorGreyShade;
+  }
+  &__item:not(:last-child){
+    margin-bottom: 10px;
+  }
+  &__link{
+    position: relative;
+    color: $colorPrimary;
+    border-bottom: 1px solid transparent;
+    outline: none;
+    &-text{
+      position: relative;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      left: -3px;
+      bottom: -3px;
+      background-color: $colorPrimaryLight;
+      transform: scale(0);
+      transition: transform 0.2s linear;
+    }
+    &:hover{
+      border-bottom-color: $colorPrimary;
+    }
+    &:focus{
+      color: $colorWhite;
+    }
+    &:focus:not(:active):before{
+      transform: scale(1);
+    }
+    &:active{
+      color: $colorPrimaryShade;
+      border-bottom-color: $colorPrimaryShade;
+    }
+  }
+  /*стили для позунка начало*/
+  &__inputs{
+    display: flex;
+    align-items: center;
+  }
+  &__text{
+    font-size: 16px;
+    color: $colorGreyShade;
+    margin-right: 9px;
+  }
+  &__label{
+    width: 86px;
+    display: flex;
+    align-items: center;
+  }
+  &__label:not(:last-child){
+    margin-right: 69px;
+  }
+  &__input{
+    border: 1px solid $colorGrey;
+    border-radius: 2px;
+    width: 86px;
+    height: 30px;
+    padding: 5px 13px;
+    outline: none;
+    &:hover{
+      cursor: pointer;
+      border-color: $colorPrimary;
+    }
+    &:focus:not(:active){
+      border-color: $colorPrimary;
+      background-color: $colorPrimaryLight;
+    }
+    &:active{
+      border-color: $colorPrimaryShade;
+    }
+  }
+  /*стили для позунка конец*/
+}

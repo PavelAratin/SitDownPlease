@@ -7,18 +7,18 @@
         распределения
         внутренних резервов и ресурсов. <button class="form-section__tooltip"></button>
       </p>
-      <form action="#" class="form">
+      <form action="#" class="form" aria-label="Форма подписки">
         <label>
-          <input class="form__input" type="text" data-validate-field="fio" placeholder="Как вас зовут?">
+          <input class="form__input" type="text" data-validate-field="fio" placeholder="Как вас зовут?" aria-label="Поле для ввода имени">
         </label>
         <label>
-          <input class="form__input" type="tel" data-validate-field="tel" placeholder="Ваш телефон">
+          <input class="form__input" type="tel" data-validate-field="tel" placeholder="Ваш телефон" aria-label="Поле для ввода телефона">
         </label>
         <label>
-          <input class="form__input" type="email" data-validate-field="email" placeholder="Ваш e-mail">
+          <input class="form__input" type="email" data-validate-field="email" placeholder="Ваш e-mail" aria-label="Поле для ввода email">
         </label>
-        <button class="button form__button" type="submit">Отправить</button>
-        <label class="checkbox-label">
+        <button class="button form__button" type="submit" aria-label="Кнопка для отправки данных">Отправить</button>
+        <label class="checkbox-label" aria-label="Галочка о принятии пользовательского соглашения">
           <input class="checkbox" type="checkbox">
           <span class="checkbox-custom"></span>
           Принимаю <a href="#" class="checkbox-label__link"><span class="checkbox-label__link-text">пользовательское
@@ -26,6 +26,9 @@
         </label>
       </form>
     </div>
-    <img class="form-section__img" src="../img/form-img.png" alt="Картинка для формы">
+    <picture class="form-section__img-box">
+      <source srcset="../img/form-img-768.png" media="(max-width: 985px)">
+      <img class="form-section__img" src="../img/form-img.png" alt="Картинка для формы">
+    </picture>
   </div>
 </section>

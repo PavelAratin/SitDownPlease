@@ -51,7 +51,7 @@ const styles = () => {
 
 //функция для работы с html
 const htmlInclude = () => {
-  return src(['./src/index.html'])
+  return src(['./src/*.html'])
     .pipe(fileInclude({
       prefix: '@',
       basepath: '@file'
@@ -68,6 +68,11 @@ const imgToApp = () => {
 const swipertToApp = () =>{
   return src('./src/swiper/**.*')
   .pipe(dest('./app/swiper'))
+};
+//функция для подлкючения библиотеки для полузунка в каталоге
+const noUiSliderToApp = () =>{
+  return src('./src/noUiSlider/**.*')
+  .pipe(dest('./app/noUiSlider'))
 };
 //функция для удаления папки app
 const clean = () => {
@@ -142,10 +147,11 @@ exports.clean = clean;
 exports.normalizeToApp = normalizeToApp;
 exports.formValidateToApp = formValidateToApp;
 exports.swipertToApp = swipertToApp;
+exports.noUiSliderToApp = noUiSliderToApp; 
 exports.watchFiles = watchFiles;
 
 //в дефолтном таске мы используем функции(вызываются первый раз перед вотчингом)
-exports.default = series(clean, parallel(htmlInclude, scipts,swipertToApp,formValidateToApp, fonts, imgToApp, svgSprites), styles, normalizeToApp, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scipts,swipertToApp,noUiSliderToApp,formValidateToApp, fonts, imgToApp, svgSprites), styles, normalizeToApp, watchFiles);
 //код для build-версии
 //функция для работы со скриптами
 const sciptsBuild = () => {
@@ -194,4 +200,4 @@ const tinypng = () => {
     .pipe(dest('./app/img'))
 }
 //dev-сборка
-exports.build = series(clean, parallel(htmlInclude, sciptsBuild,swipertToApp,formValidateToApp, fonts, imgToApp, svgSprites), stylesBuild,normalizeToApp, tinypng);
+exports.build = series(clean, parallel(htmlInclude, sciptsBuild,swipertToApp,noUiSliderToApp,formValidateToApp, fonts, imgToApp, svgSprites), stylesBuild,normalizeToApp, tinypng);

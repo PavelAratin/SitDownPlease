@@ -1,0 +1,10 @@
+.policy{
+  background-color: $colorGreyLight;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  &__text{
+    color: $colorGrey;
+    font-size: 14px;
+  }
+}

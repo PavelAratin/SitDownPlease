@@ -1,4 +1,5 @@
 @import 'variable';
+/*настройки глобальных стилей начало*/
 *{
   box-sizing: border-box;
 }
@@ -6,6 +7,7 @@ body{
   font-family: 'Open Sans',sans-serif;
   font-weight: 400;
   margin: 0;
+  min-width: 320px;
 }
 h1,h2,h3,h4,h5,h6{
   margin: 0;
@@ -28,9 +30,17 @@ button{
 input{
   padding: 0;
 }
-// .site-container{
-//   overflow: hidden;
-// }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
+.site-container{
+  overflow: hidden;
+}
 .container{
   max-width: 1360px;
   margin: 0 auto;
@@ -214,6 +224,7 @@ input{
 }
 
 .social{
+  margin-right: 32px;
   &__list{
     display: flex;
   }
@@ -226,6 +237,7 @@ input{
     justify-content: center;
     outline: none;
     padding: 3px;
+    margin: -3px;
   }
   &__link:focus{
     background-color: $colorPrimaryLight;
@@ -247,3 +259,33 @@ input{
     }
   }
 }
+.burger{
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  &__line{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $colorPrimary;
+    border-radius: 4px;
+    position: absolute;
+    &--top{
+      top: 0;
+      left: 0;  
+    }
+    &--middle{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &--bottom{
+      bottom: 0;
+    }
+  }
+}
+.catalog-widget{
+  display: flex;
+}
+/*настройки глобальных стилей конец*/

@@ -16,6 +16,9 @@
     font-size: 48px;
     margin-bottom: 108px;
     color: $colorWhite;
+    &--tablet-block{
+      display: none;
+    }
   }
   &__button{
     padding: 20px 32px;

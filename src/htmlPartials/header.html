@@ -1,11 +1,18 @@
 <header class="header">
+  <div class="header__320line">
+    <div class="container header__container">
+      <a href="#" class="header__logo header__logo--320block" aria-label="Логотип компании">
+        <img src="img/logo-sdp.png" alt="Логотип сайта">
+      </a>
+    </div>
+  </div>
   <div class="header__top">
     <div class="container">
       <div class="header__wrapper">
         <div class="header__regions regions">
           <p class="regions__text">Ваш регион:</p>
           <div class="regions__group" tabindex="1">
-            <select>
+            <select aria-label="Выбор региона">
               <option>Москва</option>
               <option>Казань</option>
               <option>Уфа</option>
@@ -13,105 +20,159 @@
             </select>
           </div>
         </div>
-        <a href="tel:+74958854547" class="tel">
+        <a href="tel:+74958854547" class="tel" aria-label="Телефон компании">
           <svg class="tel__svg">
             <use xlink:href="img/sprite.svg#call-orange"></use>
           </svg>
-          <span class="tel__text">+7(495)885-45-47</span>
+          <span class="tel__text">+7 (495) 885-45-47</span>
         </a>
-        <ul class="top-list">
-          <li class="top-list__item"><a href="#" class="top-list__link"><span class="top-list__link-text">О
+        <ul class="top-list header__top-list">
+          <li class="top-list__item"><a href="#" class="top-list__link" aria-label="О компании"><span class="top-list__link-text">О
                 компании</span></a></li>
-          <li class="top-list__item"><a href="#" class="top-list__link"><span class="top-list__link-text">Гарантия и
+          <li class="top-list__item"><a href="#" class="top-list__link" aria-label="Гарантия и возврат"><span class="top-list__link-text">Гарантия и
                 возврат</span></a></li>
-          <li class="top-list__item"><a href="#" class="top-list__link"><span class="top-list__link-text">Корпоративным
+          <li class="top-list__item"><a href="#" class="top-list__link"aria-label="Корпоративным клиентам"><span class="top-list__link-text">Корпоративным
                 клиентам</span></a></li>
-          <li class="top-list__item"><a href="#" class="top-list__link"><span class="top-list__link-text">Дизайн
+          <li class="top-list__item"><a href="#" class="top-list__link" aria-label="Дизайн решение"><span class="top-list__link-text">Дизайн
                 решение</span></a></li>
         </ul>
       </div>
     </div>
   </div>
+  <div class="header__tablet">
+    <div class="container header__container">
+      <ul class="top-list">
+        <li class="top-list__item"><a href="#" class="top-list__link" aria-label="О компании"><span class="top-list__link-text">О
+              компании</span></a></li>
+        <li class="top-list__item"><a href="#" class="top-list__link" aria-label="Гарантия и возврат"><span class="top-list__link-text">Гарантия и
+              возврат</span></a></li>
+        <li class="top-list__item"><a href="#" class="top-list__link"aria-label="Корпоративным клиентам"><span class="top-list__link-text">Корпоративным
+              клиентам</span></a></li>
+        <li class="top-list__item"><a href="#" class="top-list__link" aria-label="Дизайн решение"><span class="top-list__link-text">Дизайн
+              решение</span></a></li>
+      </ul>
+      <ul class="action-list action-list--768none">
+        <li class="action-list__item"><a href="#" class="action-list__link" aria-label="Регистрация в личном кабинете">
+          <svg class="action-list__svg">
+            <use xlink:href="img/sprite.svg#user-primary"></use>
+          </svg>
+        </a></li>
+        <li class="action-list__item"><a href="#" class="action-list__link action__link--counter" aria-label="Корзина товаров">
+          <span class="action-list__counter">0</span>
+          <svg class="action-list__svg">
+            <use xlink:href="img/sprite.svg#cart-primary"></use>
+          </svg>
+        </a></li>
+      </ul>
+    </div>
+  </div>
   <div class="header__nav">
     <div class="container">
       <div class="header__wrapper">
-        <a href="#" class="header__logo">
+        <a href="/" class="header__logo" aria-label="Логотип компании">
           <img src="img/logo-sdp.png" alt="Логотип сайта">
         </a>
         <nav class="nav nav--header">
           <ul class="nav__list">
-            <li class="nav__list-item"><a href="#" class="nav__list-link"><span
+            <li class="nav__list-item"><a href="catalog.html" class="nav__list-link" aria-label="Каталог"><span
                   class="nav__list-link-text">Каталог</span></a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link"><span
+            <li class="nav__list-item"><a href="#" class="nav__list-link" aria-label="Магазины"><span
                   class="nav__list-link-text">Магазины</span></a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link"><span
+            <li class="nav__list-item"><a href="#" class="nav__list-link" aria-label="Шоу-рум"><span
                   class="nav__list-link-text">Шоу-рум</span></a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link"><span class="nav__list-link-text">Доставка и
+            <li class="nav__list-item"><a href="#" class="nav__list-link" aria-label="Доставка и оиплата"><span class="nav__list-link-text">Доставка и
                   оплата</span></a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link"><span
+            <li class="nav__list-item"><a href="#" class="nav__list-link" aria-label="Дисконт"><span
                   class="nav__list-link-text">Дисконт</span></a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link"><span
+            <li class="nav__list-item"><a href="#" class="nav__list-link" aria-label="Контакты"><span
                   class="nav__list-link-text">Контакты</span></a></li>
           </ul>
         </nav>
       </div>
     </div>
   </div>
-  <div class="header__actions actions">
+  <div class="header__768line">
+    <div class="container">
+      <div class="header__wrapper">
+        <button class="burger js-burger">
+          <span class="burger__line burger__line--top"></span>
+          <span class="burger__line burger__line--middle"></span>
+          <span class="burger__line burger__line--bottom"></span>
+        </button>
+        <a href="#" class="header__logo header__logo--320none" aria-label="Логотип компании">
+          <img src="img/logo-sdp.png" alt="Логотип сайта">
+        </a>
+        <ul class="action-list">
+          <li class="action-list__item"><a href="#" class="action-list__link" aria-label="Регистрация в личном кабинете">
+            <svg class="action-list__svg">
+              <use xlink:href="img/sprite.svg#user-primary"></use>
+            </svg>
+          </a></li>
+          <li class="action-list__item"><a href="#" class="action-list__link action__link--counter" aria-label="Корзина товаров">
+            <span class="action-list__counter">0</span>
+            <svg class="action-list__svg">
+              <use xlink:href="img/sprite.svg#cart-primary"></use>
+            </svg>
+          </a></li>
+        </ul>
+      </div> 
+    </div>
+  </div>
+  <div class="header__actions">
     <div class="container">
       <div class="header__wrapper header__wrapper--actions">
-        <form action="#" class="header-form">
-          <input class="header-form__input" type="text" placeholder="Я хочу купить...">
-          <button class="header-form__btn" type="submit">
+        <form action="#" class="header-form" aria-label="Форма поиска по сайту">
+          <input class="header-form__input" type="text" placeholder="Я хочу купить..." aria-label="Поле для поиска по сайту">
+          <button class="header-form__btn" type="submit" aria-label="Кнопка для поиска по сайту">
           </button>
           <div class="dropdown-category">
-            <button class="dropdown-category__btn js-dropdown-category-btn">Категория</button>
+            <button class="dropdown-category__btn js-dropdown-category-btn" aria-label="Кнопка для выбора категории">Категория</button>
             <div class="dropdown-category__wrapper js-dropdown-category">
               <ul class="dropdown-category__list">
                 <li class="dropdown-category__item">
-                  <a class="dropdown-category__link" href="#">
+                  <a class="dropdown-category__link" href="#" aria-label="Категория диваны">
                     <span class="dropdown-category__text js-dropdown-category-text">Диваны</span>
                   </a>
                 </li>
                 <li class="dropdown-category__item">
-                  <a class="dropdown-category__link" href="#">
+                  <a class="dropdown-category__link" href="#" aria-label="категория кресла">
                     <span class="dropdown-category__text js-dropdown-category-text">Кресла</span>
                   </a>
                 </li>
                 <li class="dropdown-category__item">
-                  <a class="dropdown-category__link" href="#">
+                  <a class="dropdown-category__link" href="#" aria-label="категория пуфы">
                     <span class="dropdown-category__text js-dropdown-category-text">Пуфы</span>
                   </a>
                 </li>
                 <li class="dropdown-category__item">
-                  <a class="dropdown-category__link" href="#">
+                  <a class="dropdown-category__link" href="#" aria-label="категория кровати">
                     <span class="dropdown-category__text js-dropdown-category-text">Кровати</span>
                   </a>
                 </li>
                 <li class="dropdown-category__item">
-                  <a class="dropdown-category__link" href="#">
+                  <a class="dropdown-category__link" href="#" aria-label="категория тумбы">
                     <span class="dropdown-category__text js-dropdown-category-text">Тумбы</span>
                   </a>
                 </li>
               </ul>
               <ul class="dropdown-category__list">
                 <li class="dropdown-category__item">
-                  <a class="dropdown-category__link" href="#">
+                  <a class="dropdown-category__link" href="#" aria-label="категория комоды">
                     <span class="dropdown-category__text js-dropdown-category-text">Комоды</span>
                   </a>
                 </li>
                 <li class="dropdown-category__item">
-                  <a class="dropdown-category__link" href="#">
+                  <a class="dropdown-category__link" href="#" aria-label="категория стулья">
                     <span class="dropdown-category__text js-dropdown-category-text">Стулья</span>
                   </a>
                 </li>
                 <li class="dropdown-category__item">
-                  <a class="dropdown-category__link" href="#">
+                  <a class="dropdown-category__link" href="#" aria-label="категория столы">
                     <span class="dropdown-category__text js-dropdown-category-text">Столы</span>
                   </a>
                 </li>
                 <li class="dropdown-category__item">
-                  <a class="dropdown-category__link" href="#">
+                  <a class="dropdown-category__link" href="#" aria-label="категория асессуары">
                     <span class="dropdown-category__text js-dropdown-category-text">Аксессуары</span>
                   </a>
                 </li>
@@ -119,15 +180,15 @@
             </div>
           </div>
         </form>
-        <ul class="actions__list">
-          <li class="actions__item"><a href="#" class="actions__link">
-            <svg class="actions__svg">
+        <ul class="action-list action-list--tablet">
+          <li class="action-list__item"><a href="#" class="action-list__link" aria-label="Регистрация в личном кабинете">
+            <svg class="action-list__svg">
               <use xlink:href="img/sprite.svg#user-primary"></use>
             </svg>
           </a></li>
-          <li class="actions__item"><a href="#" class="actions__link actions__link--counter">
-            <span class="actions__counter">0</span>
-            <svg class="actions__svg">
+          <li class="action-list__item"><a href="#" class="action-list__link action__link--counter" aria-label="Корзина товаров">
+            <span class="action-list__counter">0</span>
+            <svg class="action-list__svg">
               <use xlink:href="img/sprite.svg#cart-primary"></use>
             </svg>
           </a></li>

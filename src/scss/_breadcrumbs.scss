@@ -1,40 +1,21 @@
-.footer{
-  padding: 24px 0;
-  background-color: $colorMdGrey;
-  &__container{
+
+.breadcrumbs{
+  font-size: 14px;
+  color: $colorGrey;
+  &__catalog{
+    padding-bottom: 32px;
+  }
+  &__list{
     display: flex;
-    justify-content: space-between;
-  }
-  &__logo{
-    display: block;
-    margin-bottom: 28px;
-    outline: none;
-  }
-  &__lists{
-    padding-top: 2px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: calc(843 / 1280 * 100%);
-  }
-  &__item{
-    font-size: 14px;
-  }
-  &__item:first-child{
-    color: $colorBlack;
-    font-size: 16px;
   }
   &__item:not(:last-child){
-    margin-bottom: 6px;
-  }
-  &__item{
-    color: $colorGrey;
+    margin-right: 15px;
   }
   &__link{
     position: relative;
     transition: color 0.2s linear;
     outline: none;
-    &::before{
+    &:before{
       content: '';
       position: absolute;
       top: -3px;
@@ -44,6 +25,15 @@
       background-color: $colorPrimaryLight;
       transform: scale(0);
       transition: transform 0.2s linear;
+    }
+    &::after{
+      content: '/';
+      position: absolute;
+      width: 5;
+      height: 10px;
+      top: 2px;
+      right: -9px;
+
     }
     &:hover{
       color: $colorPrimary;
@@ -57,8 +47,8 @@
     &:active{
       color: $colorPrimaryShade;
     }
-    &-text{
-      position: relative;
-    }
+  }
+  &__link-text{
+    position: relative;
   }
 }
