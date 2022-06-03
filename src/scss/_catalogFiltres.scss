@@ -1,8 +1,22 @@
 .catalog-filtres{
+  width: 296px;
+  margin-right: 32px;
+  &__filtres{
+    margin-bottom: 31px;
+  }
   &__title{
     color: $colorBlack;
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
+  }
+  &__category--category{
+    margin-bottom: 26px;
+  }
+  &__category--sale{
+    margin-bottom: 26px;
+  }
+  &__category--sale{
+    margin-bottom: 28px;
   }
   &__chekbox-label{
     color: $colorGreyShade;
@@ -11,7 +25,10 @@
     align-items: center;
   }
   &__list{
-    margin-bottom: 9px;
+    margin-bottom: 10px;
+    &--price{
+      margin-bottom: 36px;
+    }
   }
   &__item:first-child{
     font-weight: 600;
@@ -20,6 +37,9 @@
   }
   &__item:not(:last-child){
     margin-bottom: 10px;
+  }
+  &__item--title-price{
+    margin-bottom: 7px !important;
   }
   &__link{
     position: relative;
@@ -58,6 +78,8 @@
   &__inputs{
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
   }
   &__text{
     font-size: 16px;
@@ -65,12 +87,8 @@
     margin-right: 9px;
   }
   &__label{
-    width: 86px;
     display: flex;
     align-items: center;
-  }
-  &__label:not(:last-child){
-    margin-right: 69px;
   }
   &__input{
     border: 1px solid $colorGrey;
@@ -91,5 +109,109 @@
       border-color: $colorPrimaryShade;
     }
   }
+  &__progress{
+    height: 3px;
+    border: none;
+    border-radius: 3px;
+    background-color: $colorMdGrey;
+    .noUi-connect{
+      background-color: $colorPrimary;
+    }
+    .noUi-handle:after,
+    .noUi-handle:before{
+      display: none;
+    }
+    .noUi-touch-area{
+      background-image: url('../img/range-img.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    .noUi-handle{
+      width: 13px;
+      height: 13px;
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      top: 1px;
+      right: -6px;
+    }
+    .noUi-handle-lower{
+      right: -7px;
+    }
+  }
   /*стили для позунка конец*/
+  .checkbox-custom{
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+  }
+  .catalog-filtres__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+.new-collection{
+  &__img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  &__body{
+    background-color: $colorBlack;
+    border-radius: 0 0 10px 10px;
+    padding: 33px 30px 33px 29px;
+  }
+  &__title{
+    font-family: "PlayfairDisplay";
+    color: $colorGold;
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+  &__subtitle{
+    font-size: 16px;
+    color: $colorGrey;
+    max-width: 170px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+  &__link{
+    font-weight: 700;
+    font-size: 16px;
+    color: $colorPrimary;
+    background-image: url(../img/catalog-link.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding-right: 30px;
+    transform: background 0.2s linear,
+    color 0.2s linear;
+    position: relative;
+    outline: none;
+    &::before{
+      content: "";
+    position: absolute;
+    width: 72%;
+    height: 2px;
+    display: block;
+    background-color: #A65CF0;
+    bottom: -2px;
+    transform: scale(0);
+    transition: transform 0.2s linear, background 0.2s linear;
+    }
+    &:hover{
+      background-image: url(../img/catalog-link-hover.svg);
+    }
+    &:focus{
+      background-image: url(../img/catalog-link-focus.svg);
+    }
+    &:active{
+      background-image: url(../img/catalog-link-active.svg);
+      color: #7033AC;
+    }
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+      transform: scale(1);
+  }
+  }
 }

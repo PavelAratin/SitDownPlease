@@ -1,0 +1,95 @@
+.catalog-content{
+  width: calc(952 / 1280 * 100%);
+  margin-bottom: 68px;
+  &__cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+    gap: 32px;
+    margin-bottom: 33px;
+  }
+  &__top{
+    display: flex;
+    margin-bottom: 24px;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+  }
+  &__item:not(:last-child){
+    margin-right: 20px;
+  }
+  &__title{
+    font-weight: 400;
+    font-size: 24px;
+    color: $colorBlack;
+    margin-right: 17px;
+  }
+  &__button{
+    border: none;
+    border-radius: 3px;
+    padding: 7px 27px 6px 10px;
+    background-image: url('../img/close-filtres.svg');
+    background-repeat: no-repeat;
+    background-position: top 3px right 4px;
+    color: $colorGreyShade;
+    font-size: 14px;
+    cursor: pointer;
+    &--lime{
+      background-color: $colorLime;
+    }
+    &--bone{
+      background-color: $colorBone;
+    }
+    &--pink-violet{
+      background-color: $colorFocuselement;
+    }&--grey-light{
+      background-color: $colorGreyLight;
+    }
+  }
+  .card--rating{
+    padding-bottom: 32px;
+  }
+}
+.paginations{
+  display: flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+    align-items: center;
+  }
+  &__item:not(:last-child){
+    margin-right: 16px;
+  }
+  &__btn{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    color: $colorPrimary;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 8px 11px;
+    transition: background 0.2s linear,
+    color 0.2s linear,
+    box-shadow 0.2s linear;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: 0px 0px 0px 2px #A65CF0 inset;
+      -moz-box-shadow: 0px 0px 0px 2px #A65CF0 inset;
+      box-shadow: 0px 0px 0px 2px #A65CF0 inset;
+    &:hover{
+      background-color: $colorPrimary;
+      color: $colorWhite;
+    }
+    &:focus{
+      background-color: $colorPrimaryLight;
+      color: $colorWhite;
+    }
+    &:active{
+      background-color: $colorPrimaryShade;
+      color: $colorWhite;
+      -webkit-box-shadow: 0px 0px 0px 2px rgba(112, 51, 172, 1) inset;
+      -moz-box-shadow: 0px 0px 0px 2px rgba(112, 51, 172, 1) inset;
+      box-shadow: 0px 0px 0px 2px rgba(112, 51, 172, 1) inset;
+    }
+  }
+}

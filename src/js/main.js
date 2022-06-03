@@ -13,6 +13,8 @@ getHeroswiper();
 getOffersSwiper();
 getArticlesSwiper();
 
+getRangeSlider();
+
 
 //маска для телефона
 let inputs = document.querySelectorAll('input[type="tel"]');
@@ -21,7 +23,7 @@ if (inputs.length) {
   im.mask(inputs);
 }
 //валидация полей формы
-const form = document.querySelector('.form')
+const form = document.querySelector('.form');
 function validateForms(selector, rules, messages) {
   new window.JustValidate(selector, {
     colorWrong: '#ff6972',
@@ -30,7 +32,7 @@ function validateForms(selector, rules, messages) {
   })
 }
 if(form){
-  validateForms(form,
+  validateForms('.form',
   {
     email: { required: true, email: true },
     fio: { required: true },

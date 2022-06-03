@@ -1,7 +1,7 @@
 <div class="catalog-filtres">
   <p class="catalog-filtres__title">Фильтровать по:</p>
   <div class="catalog-filtres__filtres">
-    <div class="catalog-filtres__category">
+    <div class="catalog-filtres__category catalog-filtres__category--category">
       <ul class="catalog-filtres__list">
         <li class="catalog-filtres__item">Категория</li>
         <li class="catalog-filtres__item">
@@ -83,22 +83,142 @@
         </span></a>
     </div>
     <div class="catalog-filtres__category">
-      <ul class="catalog-filtres__list">
-        <li class="catalog-filtres__item">Цена</li>
+      <ul class="catalog-filtres__list catalog-filtres__list--price">
+        <li class="catalog-filtres__item catalog-filtres__item--title-price">Цена</li>
         <li class="catalog-filtres__item">
-          <div class="catalog-filtres__progress js-range-slider"></div>
           <div class="catalog-filtres__inputs">
             <label class="catalog-filtres__label">
               <span class="catalog-filtres__text">от</span>
-              <input class="catalog-filtres__input js-catalog-filter-input-min" type="number" min="2000" placeholder="2000" aria-label="Мнимальное значение цены">
+              <input class="catalog-filtres__input js-catalog-filter-input" type="number" min="2000" placeholder="2000"
+                aria-label="Мнимальное значение цены">
             </label>
             <label class="catalog-filtres__label">
               <span class="catalog-filtres__text">до</span>
-              <input class="catalog-filtres__input js-catalog-filter-input-max" type="number" max="150000" placeholder="150000" aria-label="Максимальное значение цены">
+              <input class="catalog-filtres__input js-catalog-filter-input" type="number" max="150000"
+                placeholder="150000" aria-label="Максимальное значение цены">
             </label>
           </div>
+          <div class="catalog-filtres__progress js-range-slider"></div>
         </li>
       </ul>
+    </div>
+    <div class="catalog-filtres__category catalog-filtres__category--sale">
+      <ul class="catalog-filtres__list">
+        <li class="catalog-filtres__item">Скидка</li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Более 5 000
+          </label>
+        </li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Менее 5 000
+          </label>
+        </li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Не важно
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class="catalog-filtres__category catalog-filtres__category--colors">
+      <ul class="catalog-filtres__list">
+        <li class="catalog-filtres__item">Цвет</li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Коричневый
+          </label>
+        </li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Черный
+          </label>
+        </li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Бежевый
+          </label>
+        </li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Серый
+          </label>
+        </li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Белый
+          </label>
+        </li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Синий
+          </label>
+        </li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Оранжевый
+          </label>
+        </li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Желтый
+          </label>
+        </li>
+        <li class="catalog-filtres__item">
+          <label class="checkbox-label catalog-filtres__chekbox-label"
+            aria-label="Галочка о принятии пользовательского соглашения">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-custom"></span>
+            Зеленый
+          </label>
+        </li>
+      </ul>
+      <a href="#" class="catalog-filtres__link">
+        <span class="catalog-filtres__link-text">
+          + еще 7
+        </span></a>
+    </div>
+  </div>
+  <div class="new-collection">
+    <img class="new-collection__img" src="img/filtres-promo.png" alt="Картинка акций">
+    <div class="new-collection__body">
+      <p class="new-collection__title">Оксфорд 1950</p>
+      <p class="new-collection__subtitle">Новая коллекция изысканных кресел</p>
+      <a href="#" class="new-collection__link">В каталог</a>
     </div>
   </div>
 </div>
