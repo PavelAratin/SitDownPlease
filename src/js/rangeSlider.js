@@ -1,7 +1,7 @@
 export function getRangeSlider() {
-  const rangeSliderr = document.querySelector('.js-range-slider');
-  if (rangeSliderr) {
-    noUiSlider.create(rangeSliderr, {
+  const rangeSlider = document.querySelector('.js-range-slider');
+  if (rangeSlider) {
+    noUiSlider.create(rangeSlider, {
       start: [2000, 150000],
       connect: true,
       step: 1,
@@ -11,5 +11,5 @@ export function getRangeSlider() {
       }
     });
   }
-  console.log(rangeSliderr)
+  console.log(rangeSlider)
 };
