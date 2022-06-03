@@ -130,7 +130,7 @@ const watchFiles = () => {
   //watch - дефолтный метод галпа
   watch('./src/scss/**/*.scss', styles);//как только будут изменения в стилях, вызовется функция styles
   watch('./src/htmlPartials/*.html', htmlInclude);
-  watch('./src/index.html', htmlInclude);
+  watch('./src/*.html', htmlInclude);
   watch('./src/img**.jpg', imgToApp);
   watch('./src/img**.png', imgToApp);
   watch('./src/img**.jpeg', imgToApp);
@@ -195,7 +195,6 @@ const tinypng = () => {
     .pipe(tinyPng({
       key: 'JS9MWwCflHycV1FDcSlkjZ8GGjTfttNw',
       log: true
-
     }))
     .pipe(dest('./app/img'))
 }
