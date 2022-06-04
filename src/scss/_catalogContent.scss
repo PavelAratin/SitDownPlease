@@ -1,6 +1,12 @@
 .catalog-content{
   width: calc(952 / 1280 * 100%);
   margin-bottom: 68px;
+  &__filtres{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
   &__cards{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
@@ -12,11 +18,9 @@
     margin-bottom: 24px;
   }
   &__list{
-    display: flex;
-    align-items: center;
-  }
-  &__item:not(:last-child){
-    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 20px
   }
   &__title{
     font-weight: 400;
@@ -33,7 +37,9 @@
     background-position: top 3px right 4px;
     color: $colorGreyShade;
     font-size: 14px;
+    text-align: left;
     cursor: pointer;
+    width: 100%;
     &--lime{
       background-color: $colorLime;
     }
@@ -61,6 +67,13 @@
     margin-right: 16px;
   }
   &__btn{
+    &.active{
+      background-color: $colorPrimaryShade;
+      color: $colorWhite;
+      -webkit-box-shadow: 0px 0px 0px 2px rgba(112, 51, 172, 1) inset;
+      -moz-box-shadow: 0px 0px 0px 2px rgba(112, 51, 172, 1) inset;
+      box-shadow: 0px 0px 0px 2px rgba(112, 51, 172, 1) inset;
+    }
     cursor: pointer;
     font-weight: 600;
     font-size: 16px;
@@ -83,6 +96,9 @@
     &:focus{
       background-color: $colorPrimaryLight;
       color: $colorWhite;
+      -webkit-box-shadow: 0px 0px 0px 2px #A65CF0 inset;
+      -moz-box-shadow: 0px 0px 0px 2px #A65CF0 inset;
+      box-shadow: 0px 0px 0px 2px #A65CF0 inset;
     }
     &:active{
       background-color: $colorPrimaryShade;
@@ -91,5 +107,31 @@
       -moz-box-shadow: 0px 0px 0px 2px rgba(112, 51, 172, 1) inset;
       box-shadow: 0px 0px 0px 2px rgba(112, 51, 172, 1) inset;
     }
+  }
+}
+.catalog-content-filtres{
+  display: none;
+  &__text{
+    font-size: 14px;
+    color: $colorBlack;
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 32px;
+    width: calc(843 / 952 * 100%);
+  }
+  &__button{
+    border-radius: 10px;
+    padding: 9px 15px;
+    background-color: $colorGreyLight;
+    border: none;
+    font-size: 16px;
+    color: $colorBlack;
+    background-image: url('../img/filtres-arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: top 17px right 15px;
+    width: 100%;
+    text-align: left;
   }
 }

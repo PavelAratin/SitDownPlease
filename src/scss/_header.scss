@@ -394,6 +394,9 @@
       transform: scale(0);
       transition: transform 0.2s linear;
     }
+    &--counter::before{
+      left: -15px;
+    }
     &:focus:not(:active):before{
       transform: scale(1);
     }
@@ -402,11 +405,6 @@
     }
     &:active svg{
       fill: $colorPrimaryShade;
-    }
-    &--counter{
-      display: flex;
-      align-items: center;
-      padding-left: 15px;
     }
   }
   &__svg{
@@ -429,7 +427,7 @@
     font-size: 10px;
     color: $colorWhite;
     line-height: 1.2;
-    padding: 1px 3px;
+    padding: 2px 3px;
     position: absolute;
     z-index: 1;
     left: -11px;

@@ -2,14 +2,35 @@
   <div class="catalog-content__top">
     <h1 class="catalog-content__title">Каталог</h1>
     <ul class="catalog-content__list">
-      <li class="catalog-content__item"><button class="catalog-content__button catalog-content__button--lime">Диваны</button></li>
-      <li class="catalog-content__item"><button class="catalog-content__button catalog-content__button--bone">До 150 000</button></li>
-      <li class="catalog-content__item"><button class="catalog-content__button catalog-content__button--pink-violet">Без скидки</button></li>
-      <li class="catalog-content__item"><button class="catalog-content__button catalog-content__button--grey-light">Оранжевый</button></li>
+      <li class="catalog-content__item catalog-content__item--lime"><button
+          class="catalog-content__button catalog-content__button--lime">Диваны</button></li>
+      <li class="catalog-content__item catalog-content__item--bone"><button class="catalog-content__button catalog-content__button--bone">До 150
+          000</button></li>
+      <li class="catalog-content__item catalog-content__item--pink-violet"><button class="catalog-content__button catalog-content__button--pink-violet">Без
+          скидки</button></li>
+      <li class="catalog-content__item catalog-content__item--grey-light"><button
+          class="catalog-content__button catalog-content__button--grey-light">Оранжевый</button></li>
+    </ul>
+  </div>
+  <div class="catalog-content__filtres catalog-content-filtres">
+    <p class="catalog-content-filtres__text">Фильтры:</p>
+    <ul class="catalog-content-filtres__list">
+      <li class="catalog-content-filtres__item">
+        <button class="catalog-content-filtres__button">Категория</button>
+      </li>
+      <li class="catalog-content-filtres__item">
+        <button class="catalog-content-filtres__button">Цена</button>
+      </li>
+      <li class="catalog-content-filtres__item">
+        <button class="catalog-content-filtres__button">Скидка</button>
+      </li>
+      <li class="catalog-content-filtres__item">
+        <button class="catalog-content-filtres__button">Цвет</button>
+      </li>
     </ul>
   </div>
   <div class="catalog-content__cards">
-    <div class="card card--rating">
+    <div class="card js-card card--rating">
       <div class="card__stars card__stars--r94">
         <svg>
           <use xlink:href="img/sprite.svg#star"></use>
@@ -23,7 +44,7 @@
       </div>
       <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
     </div>
-    <div class="card card--rating">
+    <div class="card js-card card--rating">
       <div class="card__stars card__stars--t75">
         <svg>
           <use xlink:href="img/sprite.svg#star"></use>
@@ -37,7 +58,7 @@
       </div>
       <button class="button-card card__btn card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
     </div>
-    <div class="card card--rating">
+    <div class="card js-card card--rating">
       <div class="card__stars card__stars--d31">
         <svg>
           <use xlink:href="img/sprite.svg#star"></use>
@@ -51,7 +72,7 @@
       </div>
       <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
     </div>
-    <div class="card card--rating">
+    <div class="card js-card card--rating">
       <div class="card__stars card__stars--y68">
         <svg>
           <use xlink:href="img/sprite.svg#star"></use>
@@ -65,7 +86,7 @@
       </div>
       <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
     </div>
-    <div class="card card--rating">
+    <div class="card js-card card--rating">
       <div class="card__stars card__stars--w95">
         <svg>
           <use xlink:href="img/sprite.svg#star"></use>
@@ -79,7 +100,7 @@
       </div>
       <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
     </div>
-    <div class="card card--rating">
+    <div class="card js-card card--rating">
       <div class="card__stars card__stars--g41">
         <svg>
           <use xlink:href="img/sprite.svg#star"></use>
@@ -93,7 +114,7 @@
       </div>
       <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
     </div>
-    <div class="card card--rating">
+    <div class="card js-card card--rating">
       <div class="card__stars card__stars--v93">
         <svg>
           <use xlink:href="img/sprite.svg#star"></use>
@@ -107,7 +128,7 @@
       </div>
       <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
     </div>
-    <div class="card card--rating">
+    <div class="card js-card card--rating">
       <div class="card__stars card__stars--s99">
         <svg>
           <use xlink:href="img/sprite.svg#star"></use>
@@ -121,7 +142,7 @@
       </div>
       <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
     </div>
-    <div class="card card--rating">
+    <div class="card js-card card--rating">
       <div class="card__stars card__stars--s99">
         <svg>
           <use xlink:href="img/sprite.svg#star"></use>
@@ -132,14 +153,143 @@
       <h3 class="card__title card__title--rating">Диван велюровый <br> “S-99”</h3>
       <div class="card__price card__price--rating">
         <span class="card__price-actual card__price-actual--rating">19 990 руб</span>
+      </div>
+      <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+    </div>
+    <!--!!!!!!!!!!!-->
+    <div class="card js-card card--rating">
+      <div class="card__stars card__stars--h64">
+        <svg>
+          <use xlink:href="img/sprite.svg#star"></use>
+        </svg>
+        <span class="card__number">4,6</span>
+      </div>
+      <img class="card__img" src="img/divan-h-64.png" alt="Диван кожаный “R-94”">
+      <h3 class="card__title card__title--rating">Диван флоковый <br> “H-64”</h3>
+      <div class="card__price card__price--rating">
+        <span class="card__price-actual card__price-actual--rating">25 990 руб</span>
+      </div>
+      <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+    </div>
+    <div class="card js-card card--rating">
+      <div class="card__stars card__stars--h58">
+        <svg>
+          <use xlink:href="img/sprite.svg#star"></use>
+        </svg>
+        <span class="card__number">4,6</span>
+      </div>
+      <img class="card__img" src="img/divan-h-58.png" alt="Диван кожаный “R-94”">
+      <h3 class="card__title card__title--rating">Диван флоковый <br> “H-58”</h3>
+      <div class="card__price card__price--rating">
+        <span class="card__price-actual card__price-actual--rating">23 990 руб</span>
+      </div>
+      <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+    </div>
+    <div class="card js-card card--rating">
+      <div class="card__stars card__stars--r43">
+        <svg>
+          <use xlink:href="img/sprite.svg#star"></use>
+        </svg>
+        <span class="card__number">4,6</span>
+      </div>
+      <img class="card__img" src="img/divan-r-43.png" alt="Диван кожаный “R-94”">
+      <h3 class="card__title card__title--rating">Диван из кожзама <br> “R-43”</h3>
+      <div class="card__price card__price--rating">
+        <span class="card__price-actual card__price-actual--rating">39 990 руб</span>
+      </div>
+      <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+    </div>
+    <div class="card js-card card--rating">
+      <div class="card__stars card__stars--c42">
+        <svg>
+          <use xlink:href="img/sprite.svg#star"></use>
+        </svg>
+        <span class="card__number">4,6</span>
+      </div>
+      <img class="card__img" src="img/divan-c-42.png" alt="Диван кожаный “R-94”">
+      <h3 class="card__title card__title--rating">Диван из шинила <br> “C-42”</h3>
+      <div class="card__price card__price--rating">
+        <span class="card__price-actual card__price-actual--rating">18 990 руб</span>
+      </div>
+      <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+    </div>
+    <div class="card js-card card--rating">
+      <div class="card__stars card__stars--u58">
+        <svg>
+          <use xlink:href="img/sprite.svg#star"></use>
+        </svg>
+        <span class="card__number">4,6</span>
+      </div>
+      <img class="card__img" src="img/divan-u-58.png" alt="Диван кожаный “R-94”">
+      <h3 class="card__title card__title--rating">Диван велюровый <br> “U-58”</h3>
+      <div class="card__price card__price--rating">
+        <span class="card__price-actual card__price-actual--rating">21 990 руб</span>
+      </div>
+      <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+    </div>
+    <div class="card js-card card--rating">
+      <div class="card__stars card__stars--f41">
+        <svg>
+          <use xlink:href="img/sprite.svg#star"></use>
+        </svg>
+        <span class="card__number">4,7</span>
+      </div>
+      <img class="card__img" src="img/divan-f-41.png" alt="Диван кожаный “R-94”">
+      <h3 class="card__title card__title--rating">Диван флоковый <br> “F-41”</h3>
+      <div class="card__price card__price--rating">
+        <span class="card__price-actual card__price-actual--rating">17 990 руб</span>
+      </div>
+      <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+    </div>
+    <div class="card js-card card--rating">
+      <div class="card__stars card__stars--r85">
+        <svg>
+          <use xlink:href="img/sprite.svg#star"></use>
+        </svg>
+        <span class="card__number">4,5</span>
+      </div>
+      <img class="card__img" src="img/divan-r-85.png" alt="Диван кожаный “R-94”">
+      <h3 class="card__title card__title--rating">Диван велюровый <br> “R-85”</h3>
+      <div class="card__price card__price--rating">
+        <span class="card__price-actual card__price-actual--rating">34 990 руб</span>
+      </div>
+      <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+    </div>
+    <div class="card js-card card--rating">
+      <div class="card__stars card__stars--s44">
+        <svg>
+          <use xlink:href="img/sprite.svg#star"></use>
+        </svg>
+        <span class="card__number">4,7</span>
+      </div>
+      <img class="card__img" src="img/divan-s-44.png" alt="Диван кожаный “R-94”">
+      <h3 class="card__title card__title--rating">Диван велюровый <br> “S-44”</h3>
+      <div class="card__price card__price--rating">
+        <span class="card__price-actual card__price-actual--rating">19 990 руб</span>
+      </div>
+      <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+    </div>
+    <div class="card js-card card--rating">
+      <div class="card__stars card__stars--c80">
+        <svg>
+          <use xlink:href="img/sprite.svg#star"></use>
+        </svg>
+        <span class="card__number">4,4</span>
+      </div>
+      <img class="card__img" src="img/divan-c-80.png" alt="Диван кожаный “R-94”">
+      <h3 class="card__title card__title--rating">Диван из шинила <br> “C-80”</h3>
+      <div class="card__price card__price--rating">
+        <span class="card__price-actual card__price-actual--rating">20 990 руб</span>
       </div>
       <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
     </div>
   </div>
   <div class="paginations">
     <ul class="paginations__list">
-      <li class="paginations__item"><button class="paginations__btn" aria-label="Страница 1">1</button></li>
-      <li class="paginations__item"><button class="paginations__btn" aria-label="Страница 2">2</button></li>
+      <li class="paginations__item"><button class="paginations__btn js-pagination-btn active" aria-label="Страница 1"
+          data-numpage='1'>1</button></li>
+      <li class="paginations__item"><button class="paginations__btn js-pagination-btn" aria-label="Страница 2"
+          data-numpage='2'>2</button></li>
     </ul>
   </div>
 </div>

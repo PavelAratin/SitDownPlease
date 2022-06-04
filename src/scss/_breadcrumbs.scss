@@ -50,5 +50,8 @@
   }
   &__link-text{
     position: relative;
+    &--active{
+      color: $colorPrimaryShade;
+    }
   }
 }
