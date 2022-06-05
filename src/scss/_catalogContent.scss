@@ -121,6 +121,15 @@
     grid-gap: 32px;
     width: calc(843 / 952 * 100%);
   }
+  &__item{
+    position: relative;
+    &--zindex1{
+      z-index: 1;
+    }
+    &--zindex2{
+      z-index: 2;
+    }
+  }
   &__button{
     border-radius: 10px;
     padding: 9px 15px;
@@ -134,4 +143,7 @@
     width: 100%;
     text-align: left;
   }
+}
+.js-catalog-filtres-hidden{
+  display: none;
 }

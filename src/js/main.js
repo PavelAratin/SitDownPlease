@@ -6,6 +6,7 @@ import { getHeroswiper } from './swiper';
 import { getOffersSwiper } from './swiper';
 import { getArticlesSwiper } from './swiper';
 import {getPagination} from './pagination';
+import {catalogFiltresDropdown} from './catalogFiltresDropdown';
 dropdownCategoryHeader();
 mobileMenu();
 cardsTopRating();
@@ -17,6 +18,7 @@ getArticlesSwiper();
 getRangeSlider();
 
 getPagination();
+catalogFiltresDropdown();
 
 
 //маска для телефона

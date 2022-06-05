@@ -1,6 +1,8 @@
 .catalog-filtres{
   width: 296px;
-  margin-right: 32px;
+  &--margin{
+    margin-right: 32px;
+  }
   &__filtres{
     margin-bottom: 31px;
   }

@@ -2,30 +2,258 @@
   <div class="catalog-content__top">
     <h1 class="catalog-content__title">Каталог</h1>
     <ul class="catalog-content__list">
-      <li class="catalog-content__item catalog-content__item--lime"><button
-          class="catalog-content__button catalog-content__button--lime">Диваны</button></li>
-      <li class="catalog-content__item catalog-content__item--bone"><button class="catalog-content__button catalog-content__button--bone">До 150
-          000</button></li>
-      <li class="catalog-content__item catalog-content__item--pink-violet"><button class="catalog-content__button catalog-content__button--pink-violet">Без
-          скидки</button></li>
-      <li class="catalog-content__item catalog-content__item--grey-light"><button
-          class="catalog-content__button catalog-content__button--grey-light">Оранжевый</button></li>
+      <li class="catalog-content__item catalog-content__item--lime">
+        <button class="catalog-content__button catalog-content__button--lime">Диваны</button>
+      </li>
+      <li class="catalog-content__item catalog-content__item--bone">
+        <button class="catalog-content__button catalog-content__button--bone">До 150000</button>
+      </li>
+      <li class="catalog-content__item catalog-content__item--pink-violet">
+        <button class="catalog-content__button catalog-content__button--pink-violet">Безскидки</button>
+      </li>
+      <li class="catalog-content__item catalog-content__item--grey-light">
+        <button class="catalog-content__button catalog-content__button--grey-light">Оранжевый</button>
+      </li>
     </ul>
   </div>
   <div class="catalog-content__filtres catalog-content-filtres">
     <p class="catalog-content-filtres__text">Фильтры:</p>
     <ul class="catalog-content-filtres__list">
-      <li class="catalog-content-filtres__item">
-        <button class="catalog-content-filtres__button">Категория</button>
+      <li class="catalog-content-filtres__item catalog-content-filtres__item--zindex2">
+        <button class="catalog-content-filtres__button js-catalog-content-filtres-button">Категория</button>
+        <div class="catalog-filtres catalog-filtres--catalog-content-block js-catalog-filtres-hidden">
+          <div class="catalog-filtres__filtres">
+            <div class="catalog-filtres__category">
+              <ul class="catalog-filtres__list">
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Диваны
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Кресла
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Пуфы
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Кровати
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Тумбы
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Комоды
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Стулья
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Столы
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Аксессуары
+                  </label>
+                </li>
+              </ul>
+              <a href="#" class="catalog-filtres__link">
+                <span class="catalog-filtres__link-text">
+                  + еще 12
+                </span>
+              </a>
+            </div>          
+          </div>
+        </div>
       </li>
-      <li class="catalog-content-filtres__item">
-        <button class="catalog-content-filtres__button">Цена</button>
+      <li class="catalog-content-filtres__item catalog-content-filtres__item--zindex2">
+        <button class="catalog-content-filtres__button js-catalog-content-filtres-button">Цена</button>
+        <div class="catalog-filtres catalog-filtres--catalog-content-block js-catalog-filtres-hidden">
+          <div class="catalog-filtres__filtres">
+            <div class="catalog-filtres__category">
+              <ul class="catalog-filtres__list catalog-filtres__list--price">
+                <li class="catalog-filtres__item">
+                  <div class="catalog-filtres__inputs">
+                    <label class="catalog-filtres__label">
+                      <span class="catalog-filtres__text">от</span>
+                      <input class="catalog-filtres__input js-catalog-filter-input" type="number" min="2000" placeholder="2000"
+                        aria-label="Мнимальное значение цены">
+                    </label>
+                    <label class="catalog-filtres__label">
+                      <span class="catalog-filtres__text">до</span>
+                      <input class="catalog-filtres__input js-catalog-filter-input" type="number" max="150000"
+                        placeholder="150000" aria-label="Максимальное значение цены">
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>          
+          </div>
+        </div>
       </li>
-      <li class="catalog-content-filtres__item">
-        <button class="catalog-content-filtres__button">Скидка</button>
+      <li class="catalog-content-filtres__item catalog-content-filtres__item--zindex1">
+        <button class="catalog-content-filtres__button js-catalog-content-filtres-button">Скидка</button>
+        <div class="catalog-filtres catalog-filtres--catalog-content-block catalog-filtres--catalog-content-padding js-catalog-filtres-hidden">
+          <div class="catalog-filtres__filtres">
+            <div class="catalog-filtres__category">
+              <ul class="catalog-filtres__list">
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Более 5 000
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Менее 5 000
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Не важно
+                  </label>
+                </li>
+              </ul>
+            </div>          
+          </div>
+        </div>
       </li>
-      <li class="catalog-content-filtres__item">
-        <button class="catalog-content-filtres__button">Цвет</button>
+      <li class="catalog-content-filtres__item catalog-content-filtres__item--zindex1">
+        <button class="catalog-content-filtres__button js-catalog-content-filtres-button">Цвет</button>
+        <div class="catalog-filtres catalog-filtres--catalog-content-block catalog-filtres--catalog-content-padding js-catalog-filtres-hidden">
+          <div class="catalog-filtres__filtres">
+            <div class="catalog-filtres__category">
+              <ul class="catalog-filtres__list">
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Коричневый
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Черный
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Бежевый
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Серый
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Белый
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Синий
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Оранжевый
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Желтый
+                  </label>
+                </li>
+                <li class="catalog-filtres__item">
+                  <label class="checkbox-label catalog-filtres__chekbox-label"
+                    aria-label="Галочка о принятии пользовательского соглашения">
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    Зеленый
+                  </label>
+                </li>
+              </ul>
+              <a href="#" class="catalog-filtres__link">
+                <span class="catalog-filtres__link-text">
+                  + еще 7
+                </span>
+              </a>
+            </div>          
+          </div>
+        </div>
       </li>
     </ul>
   </div>
