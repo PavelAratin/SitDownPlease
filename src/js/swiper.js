@@ -15,7 +15,7 @@ export function getOffersSwiper() {
   if (offersSwiper) {
     new Swiper(offersSwiper, {
       direction: 'horizontal',
-      loop: true,
+      loop: false,
       pagination: {
         el: '.swiper-pagination',
       },
@@ -45,7 +45,7 @@ export function getArticlesSwiper() {
       direction: 'horizontal',
       slidesPerView: 2,
       spaceBetween: 32,
-      loop: true,
+      loop: false,
       navigation: {
         nextEl: '.js-articles-swiper-button-next',
         prevEl: '.js-articles-swiper-button-prev',

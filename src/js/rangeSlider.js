@@ -10,9 +10,10 @@ export function getRangeSlider() {
         'max': [15000]
       }
     });
+
+    const inputs = document.querySelectorAll('.js-catalog-filter-input');
+    rangeSlider.noUiSlider.on('update', function (values, handle) {
+      inputs[handle].value = Math.round(values[handle]);
+    });
   }
-  const inputs = document.querySelectorAll('.js-catalog-filter-input');
-  rangeSlider.noUiSlider.on('update', function (values, handle) {
-    inputs[handle].value = Math.round(values[handle]);
-  });
 };

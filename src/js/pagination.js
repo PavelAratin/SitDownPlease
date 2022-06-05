@@ -1,6 +1,7 @@
 export function getPagination() {
   const btns = document.querySelectorAll('.js-pagination-btn')
-  const cards = document.querySelectorAll('.js-card');
+  if(btns.length){
+    const cards = document.querySelectorAll('.js-card');
   const cardsWrapper = document.querySelector('.catalog-content__cards')
   const arrayCards = Array.prototype.slice.call(cards);
   let notesOnpage = 9;
@@ -24,4 +25,5 @@ export function getPagination() {
       })
     }
   displayElements(1);
+  }
 };

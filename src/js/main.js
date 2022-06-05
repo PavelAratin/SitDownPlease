@@ -15,12 +15,12 @@ getHeroswiper();
 getOffersSwiper();
 getArticlesSwiper();
 
-getRangeSlider();
 
 getPagination();
 catalogFiltresDropdown();
 
-
+getRangeSlider();
+console.log('asdsadasd')
 //маска для телефона
 let inputs = document.querySelectorAll('input[type="tel"]');
 if (inputs.length) {

@@ -103,6 +103,10 @@ const scipts = () => {
         ]
       }
     }))
+    .on('error', function (err) {
+			console.error('WEBPACK ERROR', err);
+			this.emit('end'); // Don't stop the rest of the task
+		})
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./app/js'))
