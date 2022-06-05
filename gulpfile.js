@@ -151,7 +151,7 @@ exports.noUiSliderToApp = noUiSliderToApp;
 exports.watchFiles = watchFiles;
 
 //в дефолтном таске мы используем функции(вызываются первый раз перед вотчингом)
-exports.default = series(clean, parallel(htmlInclude, scipts,swipertToApp,noUiSliderToApp,formValidateToApp, fonts, imgToApp, svgSprites), styles, normalizeToApp, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scipts,swipertToApp,noUiSliderToApp,formValidateToApp, fonts, imgToApp, svgSprites), styles, normalizeToApp,watchFiles);
 //код для build-версии
 //функция для работы со скриптами
 const sciptsBuild = () => {
