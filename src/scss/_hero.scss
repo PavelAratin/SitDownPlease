@@ -32,4 +32,22 @@
       background-image: url('../img/hero-bg3.jpg');
     }
   }
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background-color: $colorBlack;
+    opacity: 0.3;
+  }
+  .swiper-pagination-bullet:not(:last-child){
+    margin-right: 12px;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: $colorBlack;
+    opacity: 1;
+  }
+  .swiper-horizontal>.swiper-pagination-bullets, 
+  .swiper-pagination-bullets.swiper-pagination-horizontal, 
+  .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 21px;
+  }
 }

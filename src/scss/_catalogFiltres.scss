@@ -96,7 +96,7 @@
     border: 1px solid $colorGrey;
     border-radius: 2px;
     width: 86px;
-    height: 30px;
+    height: 30px; 
     padding: 5px 13px;
     outline: none;
     &:hover{
@@ -216,4 +216,7 @@
       transform: scale(1);
   }
   }
+}
+.js-catalog-filter-none{
+  display: none;
 }

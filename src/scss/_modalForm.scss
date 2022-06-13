@@ -1,0 +1,132 @@
+.modal-form{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__wrapper{
+    padding: 30px;
+    background-color: $colorWhite;
+    border-radius: 10px;
+    width: 624px;
+    position: relative;
+    margin: 0 20px;
+  }
+  &__title{
+    margin-bottom: 8px;
+  }
+  &__subtitle{
+    font-size: 14px;
+    max-width: 374px;
+    margin-bottom: 30px;
+  }
+  &__close-button{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    svg{
+      width: 100%;
+      height: 100%;
+      fill: $colorGrey;
+      transition: fill 0.2s linear,transform 0.2s linear;
+      pointer-events: none;
+    }
+    &:hover svg{
+      fill: $colorPrimary;
+      transform: rotate(90deg);
+    }
+  }
+}
+.modal-thanks{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__wrapper{
+    background-color: $colorWhite;
+    border-radius: 10px;
+    padding: 118px 76px;
+    position: relative;
+    margin: 0 20px;
+    text-align: center;
+  }
+  &__img{
+    margin-bottom: 32px;
+  }
+  &__descriptions{
+    font-size: 32px;
+    color: $colorBlack;
+  }
+}
+.modal-swiper{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  &__wrapper{
+    background-color: $colorWhite;
+    border-radius: 10px;
+    padding-top: 50px;
+    position: relative;
+    margin: 0 20px;
+    text-align: center;
+    width: 1280px;
+    position: relative;
+    overflow: hidden;
+  }
+  &__wrapper-min{
+    padding: 20px 0;
+    background-color: $colorGreyLight;
+    position: relative;
+    .swiper-button-next,
+    .swiper-button-prev{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+    }
+    .swiper-button-prev{
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+  &__big-swiper .swiper-slide{
+    padding: 0 66px;
+  }
+  &__big-swiper{
+    margin-bottom: 50px;
+  }
+  &__min-swiper{
+    width: calc(1178 / 1280 * 100%);
+  }
+  &__min-swiper img{
+    width: 100%;
+  }
+  &__big-swiper img{
+    width: 100%;
+    max-width: 1065px;
+    max-height: 418px;
+  }
+}
+.js-modal-hidden{
+  display: none;
+}

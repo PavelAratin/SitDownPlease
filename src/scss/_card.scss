@@ -5,17 +5,32 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  position: relative;
+  &__link-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
   &--offers{
     min-height: 511px;
   }
   &--small{
     padding-top: 72px;
+    &-width{
+      width: calc(296 / 1280 * 100%);
+    }
   }
   &--md{
     padding-top: 64px;
   }
   &--big{
     padding-top: 37px;
+    &-width{
+      width: calc(624 / 1280 * 100%);
+    }
     &-two{
       padding-top: 59px;
     }
@@ -42,6 +57,8 @@
   &__price{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
     span:not(:last-child){
       margin-right: 30px;
     }
@@ -77,6 +94,8 @@
   &__btn{
     margin-top: auto;
     width: fit-content;
+    position: relative;
+    z-index: 5;
     &--rating{
       margin-left: 15px;
     }

@@ -61,18 +61,18 @@ const htmlInclude = () => {
 }
 //простая перегонка картинок для dev-версии (в процессе разработки)
 const imgToApp = () => {
-  return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg','./src/img/**.svg'])
+  return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg', './src/img/**.svg'])
     .pipe(dest('./app/img'))
 }
 //функция для подлкючения swiper (простая перегонка)
-const swipertToApp = () =>{
+const swipertToApp = () => {
   return src('./src/swiper/**.*')
-  .pipe(dest('./app/swiper'))
+    .pipe(dest('./app/swiper'))
 };
 //функция для подлкючения библиотеки для полузунка в каталоге
-const noUiSliderToApp = () =>{
+const noUiSliderToApp = () => {
   return src('./src/noUiSlider/**.*')
-  .pipe(dest('./app/noUiSlider'))
+    .pipe(dest('./app/noUiSlider'))
 };
 //функция для удаления папки app
 const clean = () => {
@@ -83,9 +83,11 @@ const clean = () => {
 const scipts = () => {
   return src('./src/js/main.js')
     .pipe(webpackStream({
+      mode: 'development',
       output: {
         filename: 'main.js',
       },
+      devtool: 'source-map',
       module: {
         rules: [
           {
@@ -95,7 +97,10 @@ const scipts = () => {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  ['@babel/preset-env', { targets: "defaults" }]
+                  ['@babel/preset-env', {
+                    targets: "defaults",
+                    debug:true
+                  }]
                 ]
               }
             }
@@ -104,9 +109,9 @@ const scipts = () => {
       }
     }))
     .on('error', function (err) {
-			console.error('WEBPACK ERROR', err);
-			this.emit('end'); // Don't stop the rest of the task
-		})
+      console.error('WEBPACK ERROR', err);
+      this.emit('end'); // Don't stop the rest of the task
+    })
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./app/js'))
@@ -119,10 +124,20 @@ const normalizeToApp = () => {
     .pipe(dest('./app/css/'))
 }
 //подключение валидыции формы к проету
-const formValidateToApp = () =>{
+const formValidateToApp = () => {
   return src('./src/formValidate/*.js')
-  .pipe(dest('./app/formValidate'))
+    .pipe(dest('./app/formValidate'))
 }
+//подключение плагина choices к проекту
+const choicesToApp = () => {
+  return src('./src/choices/*.*')
+    .pipe(dest('./app/choices'))
+}
+//подключение faviconc
+const faviconToApp = () => {
+  return src('./src/favicon.ico')
+    .pipe(dest('./app'))
+};
 
 //функция для слежения за файлами 
 const watchFiles = () => {
@@ -151,11 +166,13 @@ exports.clean = clean;
 exports.normalizeToApp = normalizeToApp;
 exports.formValidateToApp = formValidateToApp;
 exports.swipertToApp = swipertToApp;
-exports.noUiSliderToApp = noUiSliderToApp; 
+exports.noUiSliderToApp = noUiSliderToApp;
+exports.choicesToApp = choicesToApp;
+exports.faviconToApp = faviconToApp;
 exports.watchFiles = watchFiles;
 
 //в дефолтном таске мы используем функции(вызываются первый раз перед вотчингом)
-exports.default = series(clean, parallel(htmlInclude, scipts,swipertToApp,noUiSliderToApp,formValidateToApp, fonts, imgToApp, svgSprites), styles, normalizeToApp,watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scipts, swipertToApp, noUiSliderToApp, formValidateToApp, fonts, imgToApp, svgSprites, choicesToApp, faviconToApp), styles, normalizeToApp, watchFiles);
 //код для build-версии
 //функция для работы со скриптами
 const sciptsBuild = () => {
@@ -203,4 +220,4 @@ const tinypng = () => {
     .pipe(dest('./app/img'))
 }
 //dev-сборка
-exports.build = series(clean, parallel(htmlInclude, sciptsBuild,swipertToApp,noUiSliderToApp,formValidateToApp, fonts, imgToApp, svgSprites), stylesBuild,normalizeToApp, tinypng);
+exports.build = series(clean, parallel(htmlInclude, sciptsBuild, swipertToApp, noUiSliderToApp, formValidateToApp, fonts, imgToApp, svgSprites, choicesToApp, faviconToApp), stylesBuild, normalizeToApp, tinypng);

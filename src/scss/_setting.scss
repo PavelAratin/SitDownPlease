@@ -187,10 +187,6 @@ input[type=number]{
   position: absolute;
   z-index: -1;
 }
-.checkbox:focus + .checkbox-custom{
-  border: 1px solid $colorPrimaryShade;
-  background-color: $colorPrimary;
-}
 .checkbox-custom{
   display: inline-block;
   vertical-align: middle;
@@ -202,6 +198,10 @@ input[type=number]{
   border-radius: 2px;
   border: 1px solid $colorGrey;
   margin-right: 5px;
+}
+.checkbox:focus + .checkbox-custom{
+  border: 1px solid $colorPrimaryShade;
+  background-color: $colorPrimary;
 }
 .checkbox-custom::before{
   content: '';
@@ -219,6 +219,9 @@ input[type=number]{
   transition: 0.2s linear;
 }
   /*появление галочки при клике на чекбокс*/
+  .checkbox:checked + .checkbox-custom{
+    background-color: $colorPrimaryShade;
+  }
 .checkbox:checked + .checkbox-custom::before{
   transform: translate(-50%,-50%) scale(1);
 }
@@ -290,5 +293,67 @@ input[type=number]{
 }
 .page-catalog .header{
   padding-bottom: 23px;
+}
+
+.choices[data-type*=select-one] .choices__inner{
+  padding-bottom: 0;
+}
+.choices[data-type*=select-one]::after{
+  background-image: url('../img/arrow-regions-down.svg');
+  background-size: 13px 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 13px;
+  height: 8px;
+  border: none;
+  right: -1px;
+}
+.choices[data-type*=select-one].is-open::after{
+  margin-top: 0;
+  border: none;
+  background-image: url('../img/arrow-regions-up.svg');
+  top: 40%;
+}
+.choices{
+  color: $colorPrimary;
+  font-size: 16px;
+  margin-right: 10px;
+  &__inner{
+    padding: 0;
+    border: none;
+    min-height: auto;
+    background-color: transparent;
+  }
+}
+.choices__list--dropdown,
+.choices__list[aria-expanded]{
+  z-index: 150;
+  border: 2px solid $colorGreyLight;
+  font-size: 14px !important;
+  color: $colorBlack;
+}
+.is-open .choices__list--dropdown,
+.is-open .choices__list[aria-expanded]{
+  border: 2px solid $colorGreyLight;
+}
+.choices__list--dropdown .choices__list,
+.choices__list[aria-expanded] .choices__list{
+  overflow: visible;
+  max-height: none;
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted::after,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after {
+   opacity: 0;
+}
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable{
+  padding-right: 5px !important;
+}
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item{
+  padding: 5px;
+}
+.page-card-detail .header{
+  padding-bottom: 17px;
 }
 /*настройки глобальных стилей конец*/

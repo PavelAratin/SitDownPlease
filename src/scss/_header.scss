@@ -52,45 +52,6 @@
     font-size: 16px;
     margin-right: 5px;
   }
-  &__group{
-    position: relative;
-    outline: none ;
-    &::before{
-      content: '';
-      position: absolute;
-      top: 6px;
-      right: 3px;
-      display: block;
-      width: 13px;
-      height: 8px;
-      background-image: url(../img/arrow-regions-down.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      pointer-events: none;
-      z-index: 1;
-    }
-    &:hover select{
-      color: $colorPrimaryLight;
-    }
-  }
-  select{
-    position: relative;
-    z-index: 1;
-    color: $colorPrimary;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    background: transparent;
-    outline: none;
-    padding-right: 20px;
-    cursor: pointer;
-    transition: color 0.2s linear;
-    &::-ms-expand{
-      display: none;
-    }
-  }
 }
 .tel{
   position: relative;
@@ -307,6 +268,9 @@
     border-radius: 0 10px 10px 0;
     outline-color: $colorPrimary;
     cursor: pointer;
+    &.active{
+      background-image: url('../img/arrow-regions-up.svg');
+    }
     &:hover{
       border-color: $colorPrimary;
     }
@@ -424,10 +388,10 @@
     text-align: center;
     border-radius: 100%;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 11px;
     color: $colorWhite;
     line-height: 1.2;
-    padding: 2px 3px;
+    padding: 1px 3px;
     position: absolute;
     z-index: 1;
     left: -11px;
