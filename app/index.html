@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="./choices/choices.min.css">
+  <link rel="stylesheet" href="./swiper/swiper.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>SitDownPlease</title>
+</head>
+<body>
+  <div class="site-container">
+    <!--header-->
+      <header class="header">
+  <div class="header__320line">
+    <div class="container header__container">
+      <a href="#" class="header__logo header__logo--320block" aria-label="Логотип компании">
+        <img src="img/logo-sdp.png" alt="Логотип сайта">
+      </a>
+    </div>
+  </div>
+  <div class="header__top">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__regions regions">
+          <p class="regions__text">Ваш регион:</p>          
+            <select class="select regions__select js-select" name="Выбор города" aria-label="Выбор региона">
+              <option>Москва</option>
+              <option>Казань</option>
+              <option>Уфа</option>
+              <option>Пермь</option>
+            </select>
+        </div>
+        <a href="tel:+74958854547" class="tel" aria-label="Телефон компании">
+          <svg class="tel__svg">
+            <use xlink:href="img/sprite.svg#call-orange"></use>
+          </svg>
+          <span class="tel__text">+7 (495) 885-45-47</span>
+        </a>
+        <ul class="top-list header__top-list">
+          <li class="top-list__item"><a href="#" class="top-list__link" aria-label="О компании"><span class="top-list__link-text">О
+                компании</span></a></li>
+          <li class="top-list__item"><a href="#" class="top-list__link" aria-label="Гарантия и возврат"><span class="top-list__link-text">Гарантия и
+                возврат</span></a></li>
+          <li class="top-list__item"><a href="#" class="top-list__link" aria-label="Корпоративным клиентам"><span class="top-list__link-text">Корпоративным
+                клиентам</span></a></li>
+          <li class="top-list__item"><a href="#" class="top-list__link" aria-label="Дизайн решение"><span class="top-list__link-text">Дизайн
+                решение</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header__tablet">
+    <div class="container header__container">
+      <ul class="top-list">
+        <li class="top-list__item"><a href="#" class="top-list__link" aria-label="О компании"><span class="top-list__link-text">О
+              компании</span></a></li>
+        <li class="top-list__item"><a href="#" class="top-list__link" aria-label="Гарантия и возврат"><span class="top-list__link-text">Гарантия и
+              возврат</span></a></li>
+        <li class="top-list__item"><a href="#" class="top-list__link" aria-label="Корпоративным клиентам"><span class="top-list__link-text">Корпоративным
+              клиентам</span></a></li>
+        <li class="top-list__item"><a href="#" class="top-list__link" aria-label="Дизайн решение"><span class="top-list__link-text">Дизайн
+              решение</span></a></li>
+      </ul>
+      <ul class="action-list action-list--768none">
+        <li class="action-list__item"><a href="#" class="action-list__link" aria-label="Регистрация в личном кабинете">
+          <svg class="action-list__svg">
+            <use xlink:href="img/sprite.svg#user-primary"></use>
+          </svg>
+        </a></li>
+        <li class="action-list__item"><a href="#" class="action-list__link action__link--counter" aria-label="Корзина товаров">
+          <span class="action-list__counter">0</span>
+          <svg class="action-list__svg">
+            <use xlink:href="img/sprite.svg#cart-primary"></use>
+          </svg>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="header__nav">
+    <div class="container">
+      <div class="header__wrapper">
+        <a href="/" class="header__logo" aria-label="Логотип компании">
+          <img src="img/logo-sdp.png" alt="Логотип сайта">
+        </a>
+        <nav class="nav nav--header">
+          <ul class="nav__list">
+            <li class="nav__list-item"><a href="catalog.html" class="nav__list-link" aria-label="Каталог"><span
+                  class="nav__list-link-text">Каталог</span></a></li>
+            <li class="nav__list-item"><a href="#" class="nav__list-link" aria-label="Магазины"><span
+                  class="nav__list-link-text">Магазины</span></a></li>
+            <li class="nav__list-item"><a href="#" class="nav__list-link" aria-label="Шоу-рум"><span
+                  class="nav__list-link-text">Шоу-рум</span></a></li>
+            <li class="nav__list-item"><a href="#" class="nav__list-link" aria-label="Доставка и оиплата"><span class="nav__list-link-text">Доставка и
+                  оплата</span></a></li>
+            <li class="nav__list-item"><a href="#" class="nav__list-link" aria-label="Дисконт"><span
+                  class="nav__list-link-text">Дисконт</span></a></li>
+            <li class="nav__list-item"><a href="contacts.html" class="nav__list-link" aria-label="Контакты"><span
+                  class="nav__list-link-text">Контакты</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="header__768line">
+    <div class="container">
+      <div class="header__wrapper">
+        <button class="burger js-burger">
+          <span class="burger__line burger__line--top"></span>
+          <span class="burger__line burger__line--middle"></span>
+          <span class="burger__line burger__line--bottom"></span>
+        </button>
+        <a href="#" class="header__logo header__logo--320none" aria-label="Логотип компании">
+          <img src="img/logo-sdp.png" alt="Логотип сайта">
+        </a>
+        <ul class="action-list">
+          <li class="action-list__item"><a href="#" class="action-list__link" aria-label="Регистрация в личном кабинете">
+            <svg class="action-list__svg">
+              <use xlink:href="img/sprite.svg#user-primary"></use>
+            </svg>
+          </a></li>
+          <li class="action-list__item"><a href="#" class="action-list__link action__link--counter" aria-label="Корзина товаров">
+            <span class="action-list__counter">0</span>
+            <svg class="action-list__svg">
+              <use xlink:href="img/sprite.svg#cart-primary"></use>
+            </svg>
+          </a></li>
+        </ul>
+      </div> 
+    </div>
+  </div>
+  <div class="header__actions">
+    <div class="container">
+      <div class="header__wrapper header__wrapper--actions">
+        <form action="#" class="header-form" aria-label="Форма поиска по сайту">
+          <input class="header-form__input" type="text" placeholder="Я хочу купить..." aria-label="Поле для поиска по сайту">
+          <button class="header-form__btn" type="submit" aria-label="Кнопка для поиска по сайту">
+          </button>
+          <div class="dropdown-category">
+            <button class="dropdown-category__btn js-dropdown-category-btn" aria-label="Кнопка для выбора категории">Категория</button>
+            <div class="dropdown-category__wrapper js-dropdown-category">
+              <ul class="dropdown-category__list">
+                <li class="dropdown-category__item">
+                  <a class="dropdown-category__link" href="#" aria-label="Категория диваны">
+                    <span class="dropdown-category__text js-dropdown-category-text">Диваны</span>
+                  </a>
+                </li>
+                <li class="dropdown-category__item">
+                  <a class="dropdown-category__link" href="#" aria-label="категория кресла">
+                    <span class="dropdown-category__text js-dropdown-category-text">Кресла</span>
+                  </a>
+                </li>
+                <li class="dropdown-category__item">
+                  <a class="dropdown-category__link" href="#" aria-label="категория пуфы">
+                    <span class="dropdown-category__text js-dropdown-category-text">Пуфы</span>
+                  </a>
+                </li>
+                <li class="dropdown-category__item">
+                  <a class="dropdown-category__link" href="#" aria-label="категория кровати">
+                    <span class="dropdown-category__text js-dropdown-category-text">Кровати</span>
+                  </a>
+                </li>
+                <li class="dropdown-category__item">
+                  <a class="dropdown-category__link" href="#" aria-label="категория тумбы">
+                    <span class="dropdown-category__text js-dropdown-category-text">Тумбы</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="dropdown-category__list">
+                <li class="dropdown-category__item">
+                  <a class="dropdown-category__link" href="#" aria-label="категория комоды">
+                    <span class="dropdown-category__text js-dropdown-category-text">Комоды</span>
+                  </a>
+                </li>
+                <li class="dropdown-category__item">
+                  <a class="dropdown-category__link" href="#" aria-label="категория стулья">
+                    <span class="dropdown-category__text js-dropdown-category-text">Стулья</span>
+                  </a>
+                </li>
+                <li class="dropdown-category__item">
+                  <a class="dropdown-category__link" href="#" aria-label="категория столы">
+                    <span class="dropdown-category__text js-dropdown-category-text">Столы</span>
+                  </a>
+                </li>
+                <li class="dropdown-category__item">
+                  <a class="dropdown-category__link" href="#" aria-label="категория асессуары">
+                    <span class="dropdown-category__text js-dropdown-category-text">Аксессуары</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+        <ul class="action-list action-list--tablet">
+          <li class="action-list__item"><a href="#" class="action-list__link" aria-label="Регистрация в личном кабинете">
+            <svg class="action-list__svg">
+              <use xlink:href="img/sprite.svg#user-primary"></use>
+            </svg>
+          </a></li>
+          <li class="action-list__item"><a href="#" class="action-list__link action-list__link--counter" aria-label="Корзина товаров">
+            <span class="action-list__counter">0</span>
+            <svg class="action-list__svg">
+              <use xlink:href="img/sprite.svg#cart-primary"></use>
+            </svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+      <main>
+        <section class="hero">
+  <div class="swiper js-hero-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide--one">
+        <div class="container hero__container">
+          <h1 class="hero__title">Скидка 15% на первую покупку</h1>
+          <button class="button" aria-label="Кнопка получить скидку">Получить!</button>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide--two">
+        <div class="container hero__container">
+          <h1 class="hero__title">1000+ аксессуаров для дома</h1>
+          <button class="button" aria-label="Кнопка получить скидку">Получить!</button>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide--three">
+        <div class="container hero__container">
+          <h1 class="hero__title hero__title--white">Коллекция стильного и яркого текстиля</h1>
+          <button class="button" aria-label="Кнопка получить скидку">Получить!</button>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination js-hero-swiper-pagination"></div>
+  </div>
+</section>
+        <section class="offers">
+  <div class="container offers__container">
+    <h2 class="title-h2 offers__title">Специальные предложения</h2>
+    <div class="buttons-swiper">
+      <button class="js-offers-swiper-button-prev swiper-button-prev" aria-label="Кнопка предыдущий слайд"></button>
+      <button class="js-offers-swiper-button-next swiper-button-next" aria-label="Кнопка следующий слайд"></button>
+    </div>
+    <div class="swiper js-offers-swiper">
+      <div class="swiper-wrapper">
+        <!--два слайда на десктопе-->
+        <div class="swiper-slide swiper-slide--desctop">
+          <div class="card card--small card--small-width card--offers">
+            <img class="card__img" src="img/creslo-velur-x-24.png" alt="Кресло велюровое X-24">
+            <h3 class="card__title">Кресло велюровое <br> “X-24”</h3>
+            <div class="card__price">
+              <span class="card__price-actual">15 990 руб</span>
+              <span class="card__price-old">24 990 руб</span>
+            </div>
+            <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+            <span class="card__shield">- 9 000</span>
+            <a href="cardDetail.html" class="card__link-overlay"></a>
+          </div>
+          <div class="card card--big card--big-width card--offers">
+            <img class="card__img" src="img/divan-tkan-z-44.png" alt="Диван тканевый z-44">
+            <h3 class="card__title">Диван тканевый <br> “Z-44”</h3>
+            <div class="card__price">
+              <span class="card__price-actual">22 990 руб</span>
+              <span class="card__price-old">32 990 руб</span>
+            </div>
+            <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+            <span class="card__shield">- 10 000</span>
+            <img class="card__img-absolute" src="img/divan-shema.png" alt="Схема дивана">
+            <a href="cardDetail.html" class="card__link-overlay"></a>
+          </div>
+          <div class="card card--md card--small-width card--offers">
+            <img class="card__img" src="img/budilnik-quartz-23.png" alt="Будильник Quartz-23">
+            <h3 class="card__title">Будильник <br> “Quartz-23”</h3>
+            <div class="card__price">
+              <span class="card__price-actual">1 290 руб</span>
+              <span class="card__price-old">1 890 руб</span>
+            </div>
+            <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+            <span class="card__shield">- 600</span>
+            <a href="cardDetail.html" class="card__link-overlay"></a>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide--desctop">
+          <div class="card card--small card--small-width card--offers">
+            <img class="card__img" src="img/olen.png" alt="Кресло велюровое X-24">
+            <h3 class="card__title">Мини-скульптура <br> “Oh my deer”</h3>
+            <div class="card__price">
+              <span class="card__price-actual">690 руб</span>
+              <span class="card__price-old">990 руб</span>
+            </div>
+            <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+            <span class="card__shield">- 300</span>
+            <a href="cardDetail.html" class="card__link-overlay"></a>
+          </div>
+          <div class="card card--big card--big-width card--big-two card--offers">
+            <img class="card__img" src="img/divan-vel-flok-z-85.png" alt="Диван тканевый z-44">
+            <h3 class="card__title">Диван вел-флок <br> “Z-85”</h3>
+            <div class="card__price">
+              <span class="card__price-actual">22 990 руб</span>
+              <span class="card__price-old">32 990 руб</span>
+            </div>
+            <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+            <span class="card__shield">- 10 000</span>
+            <img class="card__img-absolute" src="img/divan-shema.png" alt="Схема дивана">
+            <a href="cardDetail.html" class="card__link-overlay"></a>
+          </div>
+          <div class="card card--md card--small-width card--offers">
+            <img class="card__img" src="img/termometr-gidrometr.png" alt="Будильник Quartz-23">
+            <h3 class="card__title">Термометр + гидрометр “H-18”</h3>
+            <div class="card__price">
+              <span class="card__price-actual">1 390 руб</span>
+              <span class="card__price-old">2 090 руб</span>
+            </div>
+            <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+            <span class="card__shield">- 700</span>
+            <a href="cardDetail.html" class="card__link-overlay"></a>
+          </div>
+        </div>
+        <!--Шесть слайдов на планшете-->
+        <div class="swiper-slide swiper-slide--tablet">
+            <div class="card card--small card--offers">
+              <img class="card__img" src="img/creslo-velur-x-24.png" alt="Кресло велюровое X-24">
+              <h3 class="card__title">Кресло велюровое <br> “X-24”</h3>
+              <div class="card__price">
+                <span class="card__price-actual">15 990 руб</span>
+                <span class="card__price-old">24 990 руб</span>
+              </div>
+              <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+              <span class="card__shield">- 9 000</span>
+              <a href="cardDetail.html" class="card__link-overlay"></a>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-slide--tablet">
+            <div class="card card--big card--offers">
+              <img class="card__img" src="img/divan-tkan-z-44.png" alt="Диван тканевый z-44">
+              <h3 class="card__title">Диван тканевый <br> “Z-44”</h3>
+              <div class="card__price">
+                <span class="card__price-actual">22 990 руб</span>
+                <span class="card__price-old">32 990 руб</span>
+              </div>
+              <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+              <span class="card__shield">- 10 000</span>
+              <a href="cardDetail.html" class="card__link-overlay"></a>
+            </div>        
+        </div>
+        <div class="swiper-slide swiper-slide--tablet">          
+            <div class="card card--md card--offers">
+              <img class="card__img" src="img/budilnik-quartz-23.png" alt="Будильник Quartz-23">
+              <h3 class="card__title">Будильник <br> “Quartz-23”</h3>
+              <div class="card__price">
+                <span class="card__price-actual">1 290 руб</span>
+                <span class="card__price-old">1 890 руб</span>
+              </div>
+              <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+              <span class="card__shield">- 600</span>
+            </div>
+            <a href="cardDetail.html" class="card__link-overlay"></a>         
+        </div>
+        <div class="swiper-slide swiper-slide--tablet">          
+            <div class="card card--small card--offers">
+              <img class="card__img" src="img/olen.png" alt="Кресло велюровое X-24">
+              <h3 class="card__title">Мини-скульптура <br> “Oh my deer”</h3>
+              <div class="card__price">
+                <span class="card__price-actual">690 руб</span>
+                <span class="card__price-old">990 руб</span>
+              </div>
+              <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+              <span class="card__shield">- 300</span>
+              <a href="cardDetail.html" class="card__link-overlay"></a>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-slide--tablet">        
+            <div class="card card--big card--big-two card--offers">
+              <img class="card__img" src="img/divan-vel-flok-z-85.png" alt="Диван тканевый z-44">
+              <h3 class="card__title">Диван вел-флок <br> “Z-85”</h3>
+              <div class="card__price">
+                <span class="card__price-actual">22 990 руб</span>
+                <span class="card__price-old">32 990 руб</span>
+              </div>
+              <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+              <span class="card__shield">- 10 000</span>
+              <a href="cardDetail.html" class="card__link-overlay"></a>
+            </div>         
+        </div>
+        <div class="swiper-slide swiper-slide--tablet">          
+            <div class="card card--md card--offers">
+              <img class="card__img" src="img/termometr-gidrometr.png" alt="Будильник Quartz-23">
+              <h3 class="card__title">Термометр + гидрометр “H-18”</h3>
+              <div class="card__price">
+                <span class="card__price-actual">1 390 руб</span>
+                <span class="card__price-old">2 090 руб</span>
+              </div>
+              <button class="button-card card__btn" aria-label="Кнопка купить">Купить</button>
+              <span class="card__shield">- 700</span>
+              <a href="cardDetail.html" class="card__link-overlay"></a>
+            </div>         
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+        <section class="rating">
+  <div class="container">
+    <h2 class="title-h2 rating__title">
+      Высокий рейтинг
+    </h2>
+    <div class="rating__wrapper">
+      <div class="card card--rating">
+        <div class="card__stars card__stars--r94">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">5,0</span>
+        </div>
+        <img class="card__img" src="img/divan-r-94.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван кожаный <br> “R-94”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">94 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating">
+        <div class="card__stars card__stars--t75">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,9</span>
+        </div>
+        <img class="card__img" src="img/divan-t-75.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван апартековый <br> “T-75”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">69 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating">
+        <div class="card__stars card__stars--d31">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,8</span>
+        </div>
+        <img class="card__img" src="img/divan-d-31.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван тканевый <br> “D-31”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">28 490 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating">
+        <div class="card__stars card__stars--y68">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,8</span>
+        </div>
+        <img class="card__img" src="img/divan-y-68.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван велюровый <br> “Y-68”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">22 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating">
+        <div class="card__stars card__stars--w95">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,8</span>
+        </div>
+        <img class="card__img" src="img/divan-w-95.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван из шинила <br> “W-95”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">22 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating">
+        <div class="card__stars card__stars--g41">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,8</span>
+        </div>
+        <img class="card__img" src="img/divan-g-41.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван флоковый <br> “G-41”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">17 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating js-card-rating-none">
+        <div class="card__stars card__stars--v93">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,8</span>
+        </div>
+        <img class="card__img" src="img/divan-v-93.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван шиниловый <br> “V-43”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">19 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating js-card-rating-none">
+        <div class="card__stars card__stars--v93">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,8</span>
+        </div>
+        <img class="card__img" src="img/divan-v-93.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван шиниловый <br> “V-43”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">19 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating js-card-rating-none">
+        <div class="card__stars card__stars--s99">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,7</span>
+        </div>
+        <img class="card__img" src="img/divan-s-99.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван велюровый <br> “S-99”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">19 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating js-card-rating-none">
+        <div class="card__stars card__stars--s99">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,7</span>
+        </div>
+        <img class="card__img" src="img/divan-s-99.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван велюровый <br> “S-99”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">19 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating rating__card-none">
+        <div class="card__stars card__stars--s99">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,7</span>
+        </div>
+        <img class="card__img" src="img/divan-s-99.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван велюровый <br> “S-99”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">19 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+      <div class="card card--rating rating__card-none">
+        <div class="card__stars card__stars--s99">
+          <svg>
+            <use xlink:href="img/sprite.svg#star"></use>
+          </svg>
+          <span class="card__number">4,7</span>
+        </div>
+        <img class="card__img" src="img/divan-s-99.png" alt="Диван кожаный “R-94”">
+        <h3 class="card__title card__title--rating">Диван велюровый <br> “S-99”</h3>
+        <div class="card__price card__price--rating">
+          <span class="card__price-actual card__price-actual--rating">19 990 руб</span>
+        </div>
+        <button class="button-card card__btn card__btn--rating" aria-label="Кнопка купить">Купить</button>
+        <a href="cardDetail.html" class="card__link-overlay"></a>
+      </div>
+    </div>
+    <button class="button rating__button js-rating-btn" aria-label="Кнопка смотреть больше товаров">Смотреть больше
+      товаров</button>
+  </div>
+</section>
+        <section class="promo">
+  <div class="container promo__container">
+    <h2 class="promo__title">Оксфорд 1950</h2>
+    <p class="promo__subtitle promo__subtitle--tablet-none">Hизысканных кресел</p>
+    <p class="promo__subtitle promo__subtitle--tablet-block">Новая коллекция изысканных кресел</p>
+    <button class="button promo__button" aria-label="Кнопка ознакомиться со специальным предложением">Ознакомиться</button>
+  </div>
+</section>
+        <section class="top-category">
+  <div class="container">
+    <h2 class="title-h2 top-category__title-top">Топ категории</h2>
+    <div class="top-category__cards">
+      <div class="top-category__card top-category__card--divan">
+        <ul class="top-category__list">
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="прямые диваны"><span
+                class="top-category__link-text">Прямые</span></a></li>
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="угловые диваны"><span
+                class="top-category__link-text">Угловые</span></a></li>
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="модульные диваны"><span
+                class="top-category__link-text">Модульные</span></a></li>
+        </ul>
+        <h3 class="top-category__title">Диваны</h3>
+        <a class="top-category__link-incatalog top-category__link-incatalog--block-mobile" href="#" aria-label="Ссылка перейти в каталог">
+          <h3 class="top-category__title">Диваны</h3>
+        </a>
+        <picture>
+          <source srcset="img/category-divan-mobile.png" media="(max-width: 767px)">
+          <img class="top-category__img top-category__img--divan" src="../img/category-divan.png" alt="Диваны">
+        </picture>
+        <a class="top-category__link-incatalog top-category__link-incatalog--none-mobile" href="#" aria-label="Ссылка перейти в каталог">В каталог</a>
+      </div>
+      <div class="top-category__card top-category__card--cresla">
+        <ul class="top-category__list">
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="мягкие кресла"><span
+                class="top-category__link-text">Мягкие</span></a></li>
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="кресла-кровати"><span
+                class="top-category__link-text">Кресла-кровати</span></a></li>
+        </ul>
+        <h3 class="top-category__title">Кресла</h3>
+        <a class="top-category__link-incatalog top-category__link-incatalog--block-mobile" href="#" aria-label="Ссылка перейти в каталог">
+          <h3 class="top-category__title">Кресла</h3>
+        </a>
+        <picture>
+          <source srcset="img/category-cresla-mobile.png" media="(max-width: 340px)">
+          <source srcset="img/category-cresla-tablet.png" media="(max-width: 1060px)">
+          <img class="top-category__img top-category__img--creslo" src="../img/category-cresla.png" alt="Диваны">
+        </picture>
+        <a class="top-category__link-incatalog top-category__link-incatalog--none-mobile" href="#" aria-label="ссылка перейти в каталог">В каталог</a>
+      </div>
+      <div class="top-category__card top-category__card--crovat">
+        <ul class="top-category__list">
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="односпальные кровати"><span
+                class="top-category__link-text">Односпальные</span></a></li>
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="двуспальные кровати"><span
+                class="top-category__link-text">Двуспальные</span></a></li>
+        </ul>
+        <h3 class="top-category__title">Кровати</h3>
+        <a class="top-category__link-incatalog top-category__link-incatalog--block-mobile" href="#" aria-label="Ссылка перейти в каталог">
+          <h3 class="top-category__title">Кровати</h3>
+        </a>
+        <picture>
+          <source srcset="img/category-crovat-mobile.png" media="(max-width: 340px)">
+          <source srcset="img/category-crovat-tablet.png" media="(max-width: 1060px)">
+          <img class="top-category__img top-category__img--crovat" src="../img/category-crovat.png" alt="Диваны">
+        </picture>
+        <a class="top-category__link-incatalog top-category__link-incatalog--none-mobile" href="#" aria-label="Ссылка перейти в каталог">В каталог</a>
+      </div>
+      <div class="top-category__card top-category__card--tumbi">
+        <ul class="top-category__list">
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="тумбы"><span
+                class="top-category__link-text">Тумбы</span></a></li>
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="комоды"><span
+                class="top-category__link-text">Комоды</span></a></li>
+        </ul>
+        <h3 class="top-category__title">Тумбы и комоды</h3>
+        <a class="top-category__link-incatalog top-category__link-incatalog--block-mobile" href="#" aria-label="Ссылка перейти в каталог">
+          <h3 class="top-category__title">Тумбы и комоды</h3>
+        </a>
+        <picture>
+          <source srcset="img/category-tumbi-mobile.png" media="(max-width: 340px)">
+          <source srcset="img/category-tumbi-tablet.png" media="(max-width: 1060px)">
+          <img class="top-category__img top-category__img--tumbi" src="../img/category-tumbi.png" alt="Диваны">
+        </picture>
+        <a class="top-category__link-incatalog top-category__link-incatalog--none-mobile" href="#" aria-label="ссылка перейти в каталог">В каталог</a>
+      </div>
+      <div class="top-category__card top-category__card--stuli">
+        <ul class="top-category__list">
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="стулья деревянные"><span
+                class="top-category__link-text">Деревянные</span></a></li>
+          <li class="top-category__item"><a href="#" class="top-category__link" aria-label="стулья металлокаркасные"><span
+                class="top-category__link-text">Металлокаркас</span></a></li>
+        </ul>
+        <h3 class="top-category__title">Стулья</h3>
+        <a class="top-category__link-incatalog top-category__link-incatalog--block-mobile" href="#" aria-label="Ссылка перейти в каталог">
+          <h3 class="top-category__title">Стулья</h3>
+        </a>
+        <picture>
+          <source srcset="img/category-stuli-mobile.png" media="(max-width: 340px)">
+          <source srcset="img/category-stuli-tablet.png" media="(max-width: 1060px)">
+          <img class="top-category__img top-category__img--stuli" src="../img/category-stuli.png" alt="Диваны">
+        </picture>
+        <a class="top-category__link-incatalog top-category__link-incatalog--none-mobile" href="#"  aria-label="ссылка перейти в каталог">В каталог</a>
+      </div>
+    </div>
+  </div>
+</section>
+        <section class="articles">
+  <div class="container articles__container">
+    <h2 class="title-h2 articles__title">Полезное</h2>
+    <div class="buttons-swiper">
+      <button class="js-articles-swiper-button-prev swiper-button-prev" aria-label="Предыдущий слайд"></button>
+      <button class="js-articles-swiper-button-next swiper-button-next" aria-label="Следующий слайд"></button>
+    </div>
+    <div class="swiper js-articles-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="articles__card">
+            <img class="articles__img" src="img/articles-img1.jpg" alt="Картинка для статьи">
+            <div class="articles__card-body">
+              <p class="articles__text">
+                И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют собой не что иное?
+              </p>
+              <button class="button-card articles__button" aria-label="Кнопка читать статью">Читать</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="articles__card">
+            <img class="articles__img" src="img/articles-img2.jpg" alt="Картинка для статьи">
+            <div class="articles__card-body">
+              <p class="articles__text articles__text--two">
+                Как принято считать, некоторые особенности приносят несомненную пользу обществу?
+              </p>
+              <button class="button-card articles__button" aria-label="Читать статью">Читать</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="articles__card">
+            <img class="articles__img" src="img/articles-img3.jpg" alt="Картинка для статьи">
+            <div class="articles__card-body">
+              <p class="articles__text">
+                Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?
+              </p>
+              <button class="button-card articles__button" aria-label="читать статью">Читать</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="articles__card">
+            <img class="articles__img" src="img/articles-img4.jpg" alt="Картинка для статьи">
+            <div class="articles__card-body">
+              <p class="articles__text">
+                Прежде всего, консультация с широким активом однозначно фиксирует необходимость распределения?
+              </p>
+              <button class="button-card articles__button" aria-label="Читать статью">Читать</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="articles__card">
+            <img class="articles__img" src="img/articles-img5.jpg" alt="Картинка для статьи">
+            <div class="articles__card-body">
+              <p class="articles__text">
+                Как принято считать, некоторые особенности приносят несомненную пользу обществу?
+              </p>
+              <button class="button-card  articles__button" aria-label="Читать статю">Читать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        <section class="form-section">
+  <div class="container form-section__container">
+    <div class="form-section__wrapper">
+      <h2 class="title-h2 form-section__title">Мы всегда вам рады!</h2>
+      <p class="form-section__subtitle">
+        Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность
+        распределения
+        внутренних резервов и ресурсов. <button class="form-section__tooltip" aria-label="Всплывающая подсказка"></button>
+      </p>
+      <form action="#" class="form" aria-label="Форма подписки">
+        <label>
+          <input class="form__input" type="text" data-validate-field="fio" placeholder="Как вас зовут?" aria-label="Поле для ввода имени">
+        </label>
+        <label>
+          <input class="form__input" type="tel" data-validate-field="tel" placeholder="Ваш телефон" aria-label="Поле для ввода телефона">
+        </label>
+        <label>
+          <input class="form__input" type="email" data-validate-field="email" placeholder="Ваш e-mail" aria-label="Поле для ввода email">
+        </label>
+        <button class="button form__button" type="submit" aria-label="Кнопка для отправки данных">Отправить</button>
+        <label class="checkbox-label" aria-label="Галочка о принятии пользовательского соглашения">
+          <input class="checkbox" type="checkbox">
+          <span class="checkbox-custom"></span>
+          Принимаю <a href="#" class="checkbox-label__link"><span class="checkbox-label__link-text">пользовательское
+              соглашение</span></a>
+        </label>
+      </form>
+    </div>
+    <picture class="form-section__img-box">
+      <source srcset="../img/form-img-768.png" media="(max-width: 985px)">
+      <img class="form-section__img" src="../img/form-img.png" alt="Картинка для формы">
+    </picture>
+  </div>
+</section>
+      </main>
+      <footer class="footer">
+  <div class="container footer__container">
+    <div class="social">
+      <a href="#" class="footer__logo" aria-label="Логотип компании в футере">
+        <img src="img/logo-sdp.png" alt="Логотиа сайта">
+      </a>
+      <ul class="social__list">
+        <li class="social__item"><a href="#" class="social__link" aria-label="Ссылка на соцсеть фейсбук">
+            <svg class="social__svg" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 0C6.74999 0 0 6.76205 0 15.0904C0 22.6205 5.48999 28.8705 12.66 30V19.4578H8.84999V15.0904H12.66V11.762C12.66 7.98193 14.895 5.90361 18.33 5.90361C19.965 5.90361 21.675 6.18976 21.675 6.18976V9.90964H19.785C17.925 9.90964 17.34 11.0693 17.34 12.259V15.0904H21.51L20.835 19.4578H17.34V30C20.8746 29.4395 24.0933 27.6288 26.4149 24.8947C28.7364 22.1606 30.008 18.6832 30 15.0904C30 6.76205 23.25 0 15 0Z" />
+            </svg>
+          </a></li>
+        <li class="social__item"><a href="#" class="social__link" aria-label="Ссылка на соцсеть вк">
+            <svg class="social__svg" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 0C6.71601 0 0 6.7157 0 15C0 23.2843 6.71601 30 15 30C23.284 30 30 23.2843 30 15C30 6.7157 23.284 0 15 0ZM22.6088 16.6223C23.3079 17.3052 24.0476 17.9478 24.6752 18.7013C24.9532 19.0346 25.2153 19.3792 25.4148 19.7669C25.6996 20.3196 25.4425 20.9257 24.9477 20.9586L21.8747 20.958C21.081 21.0236 20.4494 20.7035 19.9169 20.1609C19.4919 19.7285 19.0975 19.2666 18.6881 18.8194C18.5208 18.6359 18.3447 18.4631 18.1347 18.3272C17.7158 18.0546 17.3518 18.1381 17.1118 18.5758C16.8672 19.0211 16.8114 19.5146 16.788 20.0102C16.7546 20.7348 16.5361 20.9242 15.809 20.9583C14.2554 21.031 12.7814 20.7953 11.4114 20.0121C10.2028 19.3212 9.26731 18.3462 8.45217 17.2423C6.86486 15.0902 5.64921 12.7283 4.55693 10.2985C4.3111 9.7513 4.49095 9.45852 5.09463 9.44716C6.0976 9.42783 7.10056 9.43028 8.10353 9.44624C8.51171 9.45268 8.78179 9.68624 8.93862 10.0714C9.48061 11.4049 10.1451 12.6737 10.9777 13.8503C11.1996 14.1637 11.4261 14.4761 11.7486 14.6974C12.1047 14.9417 12.376 14.861 12.5438 14.4635C12.6513 14.2109 12.6976 13.9409 12.7209 13.6702C12.8007 12.743 12.8102 11.8162 12.6721 10.8927C12.5862 10.3148 12.2612 9.94158 11.6851 9.83233C11.3917 9.77678 11.4347 9.66813 11.5774 9.50056C11.8251 9.21084 12.0571 9.03161 12.5208 9.03161L15.9928 9.031C16.5401 9.13841 16.6628 9.38394 16.7371 9.93514L16.7402 13.7936C16.7337 14.0069 16.8473 14.6391 17.2303 14.7787C17.5372 14.88 17.7397 14.6339 17.9233 14.4396C18.7559 13.556 19.3492 12.5131 19.8804 11.4338C20.1149 10.9577 20.3171 10.4652 20.5136 9.97166C20.6596 9.60675 20.8868 9.42721 21.2986 9.43335L24.642 9.43734C24.7406 9.43734 24.8406 9.43826 24.9382 9.45514C25.5017 9.55151 25.6561 9.79396 25.4817 10.3436C25.2074 11.2073 24.6743 11.9266 24.1531 12.6479C23.5946 13.4201 22.9989 14.1652 22.4458 14.9408C21.9376 15.6497 21.9778 16.0066 22.6088 16.6223Z" />
+            </svg>
+          </a></li>
+        <li class="social__item"><a href="#" class="social__link" aria-label="Ссылка на соцсеть интсаграм">
+            <svg class="social__svg" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.1289 15C12.1289 16.5857 13.4143 17.8711 15 17.8711C16.5857 17.8711 17.8711 16.5857 17.8711 15C17.8711 13.4143 16.5857 12.1289 15 12.1289C13.4143 12.1289 12.1289 13.4143 12.1289 15Z" />
+              <path
+                d="M8.28558 9.91991C8.4236 9.54591 8.64378 9.2074 8.92989 8.92953C9.20775 8.64343 9.54604 8.42325 9.92026 8.28523C10.2238 8.16736 10.6797 8.02705 11.5195 7.98883C12.4279 7.9474 12.7003 7.93848 15.0001 7.93848C17.3001 7.93848 17.5725 7.94717 18.4807 7.9886C19.3204 8.02705 19.7766 8.16736 20.0799 8.28523C20.4541 8.42325 20.7926 8.64343 21.0702 8.92953C21.3563 9.2074 21.5765 9.54568 21.7148 9.91991C21.8326 10.2234 21.9729 10.6796 22.0112 11.5193C22.0526 12.4275 22.0615 12.6999 22.0615 14.9999C22.0615 17.2997 22.0526 17.5721 22.0112 18.4805C21.9729 19.3203 21.8326 19.7762 21.7148 20.0797C21.5765 20.454 21.3566 20.7923 21.0705 21.0701C20.7926 21.3562 20.4543 21.5764 20.0801 21.7144C19.7766 21.8325 19.3204 21.9728 18.4807 22.011C17.5725 22.0525 17.3003 22.0612 15.0003 22.0612C12.7 22.0612 12.4277 22.0525 11.5197 22.011C10.6799 21.9728 10.2238 21.8325 9.92026 21.7144C9.16907 21.4247 8.57535 20.8309 8.28558 20.0797C8.16771 19.7762 8.0274 19.3203 7.98895 18.4805C7.94753 17.5721 7.93883 17.2997 7.93883 14.9999C7.93883 12.6999 7.94753 12.4275 7.98895 11.5193C8.02718 10.6796 8.16748 10.2234 8.28558 9.91991ZM15.0001 19.4226C17.4429 19.4226 19.4232 17.4426 19.4232 14.9997C19.4232 12.5569 17.4429 10.5768 15.0001 10.5768C12.5574 10.5768 10.5771 12.5569 10.5771 14.9997C10.5771 17.4426 12.5574 19.4226 15.0001 19.4226ZM10.4023 11.4356C10.9731 11.4356 11.4359 10.9728 11.4359 10.4019C11.4359 9.8311 10.9731 9.3683 10.4023 9.3683C9.83145 9.3683 9.36865 9.8311 9.36865 10.4019C9.36888 10.9728 9.83145 11.4356 10.4023 11.4356Z" />
+              <path
+                d="M15 0C23.283 0 30 6.717 30 15C30 23.283 23.283 30 15 30C6.717 30 0 23.283 0 15C0 6.717 6.717 0 15 0ZM6.43867 18.5511C6.48033 19.468 6.62613 20.094 6.83899 20.6419C7.28645 21.7989 8.20107 22.7135 9.35806 23.161C9.90578 23.3739 10.532 23.5194 11.4487 23.5613C12.3672 23.6032 12.6606 23.6133 14.9998 23.6133C17.3392 23.6133 17.6324 23.6032 18.5511 23.5613C19.4678 23.5194 20.094 23.3739 20.6417 23.161C21.2167 22.9447 21.7371 22.6057 22.1674 22.1674C22.6055 21.7374 22.9445 21.2167 23.1608 20.6419C23.3736 20.0942 23.5194 19.468 23.5611 18.5513C23.6034 17.6326 23.6133 17.3392 23.6133 15C23.6133 12.6608 23.6034 12.3674 23.5613 11.4489C23.5197 10.532 23.3741 9.90601 23.1612 9.35806C22.9449 8.78334 22.6057 8.26263 22.1674 7.83257C21.7374 7.39426 21.2167 7.05528 20.6419 6.83899C20.094 6.62613 19.468 6.48056 18.5511 6.43867C17.6326 6.39679 17.3392 6.38672 15 6.38672C12.6608 6.38672 12.3674 6.39679 11.4489 6.4389C10.532 6.48056 9.90601 6.62613 9.35806 6.83876C8.78334 7.05505 8.26263 7.39426 7.83234 7.83257C7.39426 8.26286 7.05505 8.78334 6.83899 9.35806C6.6259 9.90601 6.48033 10.532 6.43845 11.4489C6.39656 12.3674 6.38672 12.6608 6.38672 15C6.38672 17.3392 6.39656 17.6326 6.43867 18.5511Z" />
+            </svg>
+          </a></li>
+      </ul>
+    </div>
+    <div class="footer__lists">
+      <ul class="footer__list">
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="О нас"><span class="footer__link-text">О нас</span></a></li>
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="О компании"><span class="footer__link-text">О компании</span></a></li>
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="Блог"><span class="footer__link-text">Блог</span></a></li>
+      </ul>
+      <ul class="footer__list">
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="Услуги"><span class="footer__link-text">Услуги</span></a></li>
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="Доставка"><span class="footer__link-text">Доставка</span></a></li>
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="Рассрочка и кредит"><span class="footer__link-text">Рассрочка и кредит</span></a></li>
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="Сборка и установка"><span class="footer__link-text">Сборка и установка</span></a></li>
+      </ul>
+      <ul class="footer__list">
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="Связь с нами"><span class="footer__link-text">Связь с нами</span></a></li>
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="Обратная связь"><span class="footer__link-text">Обратная свзяь</span></a></li>
+        <li class="footer__item"><a href="contacts.html" class="footer__link" aria-label="Контакты"><span class="footer__link-text">Контакты</span></a></li>
+      </ul>
+      <ul class="footer__list">
+        <li class="footer__item"><a href="cooperation.html" class="footer__link" aria-label="Сотрудничество"><span class="footer__link-text">Сотрудничество</span></a></li>
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="Поставщикам"><span class="footer__link-text">Поставщикам</span></a></li>
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="Оптовикам"><span class="footer__link-text">Оптовикам</span></a></li>
+        <li class="footer__item"><a href="#" class="footer__link" aria-label="Карьера"><span class="footer__link-text">Карьера</span></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+      <div class="policy">
+  <p class="policy__text">SDP® &nbsp; 2011-2021</p>
+</div>
+      <div class="mobile-menu js-mobile-menu-none">
+  <div class="container">
+    <nav class="mobile-menu__nav">
+      <button class="mobile-menu__button close-button js-close-button">
+        <span class="close-button__line close-button__line--one"></span>
+        <span class="close-button__line close-button__line--two"></span>
+      </button>
+      <div class="mobile-menu__lists">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Каталог</a></li>
+          <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Магазины</a></li>
+          <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Шоурум</a></li>
+        </ul>
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Доставка и оплата</a></li>
+          <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Дисконт</a></li>
+          <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+  </div>
+  <script src="./formValidate/justValidate.min.js"></script>
+  <script src="./formValidate/inputMask.min.js"></script>
+  <script src="./choices/choices.min.js"></script>
+  <script src="./swiper/swiper.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
