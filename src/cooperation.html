@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="./choices/choices.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Сотрудничество</title>
+</head>
+
+<body class="cooperation-page">
+  <div class="site-container">
+    <!--header-->
+    @include('htmlPartials/header.html')
+    <main>
+      @include('htmlPartials/breadcrumbsCooperation.html')
+      @include('htmlPartials/cooperationPart.html')
+    </main>
+    @include('htmlPartials/footer.html')
+    @include('htmlPartials/policy.html')
+    @include('htmlPartials/mobileMenu.html')
+  </div>
+  <script src="./choices/choices.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

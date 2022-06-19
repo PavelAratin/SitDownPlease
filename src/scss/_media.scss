@@ -494,6 +494,12 @@
   .modal-swiper__min-swiper{
     width: calc(466 / 624 * 100%);
   }
+  .contacts__form{
+    width: 557px;
+  }
+  .contacts__input{
+    width: 405px;
+  }
 }
 @media screen and (max-width:767px) {
   .container{
@@ -975,6 +981,44 @@
   }
   .modal-thanks__wrapper{
     padding: 60px 51px;
+  }
+  .cooperation__title{
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  .cooperation__subtitle{
+    font-size: 16px;
+    &--mobile{
+      font-size: 14px;
+    }
+  }
+  .cooperation__text{
+    font-size: 14px;
+  }
+  .cooperation-warranty__text{
+    font-size: 16px;
+    padding: 5px 0 5px 52px;
+    max-width: 236px;
+    background-size: 36px 54px;
+  }
+  .contacts__form{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .contacts__input{
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  [class*=balloon__layout]{
+    width: 232px;
+  }
+  .baloon__text{
+    font-size: 12px;
+    max-width: 192px;
+  }
+  .dropdown-search{
+    width: 100%;
+    top: 107%;
   }
 }
 @media screen and(max-width:500px){

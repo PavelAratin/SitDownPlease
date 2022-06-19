@@ -1,0 +1,97 @@
+.contacts{
+  &__title{
+    font-weight: 400;
+    font-size: 32px;
+    color: $colorBlack;
+    margin-bottom: 16px;
+  }
+  &__form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 776px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+  &__input{
+    width: 624px;
+    border: none;
+    background-color: $colorGreyLight;
+    border-radius: 10px;
+    padding: 18px;
+    transition: background 0.2s linear;
+    &::placeholder{
+      color: $colorGrey;
+      font-size: 16px;
+    }
+    &:hover{
+      cursor: pointer;
+      background-color: $colorMdGrey;
+    }
+    &:focus{
+      outline-color: $colorPrimary;
+      background-color: $colorPrimaryLightLight;
+    }
+  }
+  &__button{
+    padding: 19px 35px;
+  }
+}
+.map{
+  width: 100%;
+  height: 510px;
+  margin-bottom: 70px;
+}
+.dropdown-search{
+  position: absolute;
+  border: 1px solid $colorMdGrey;
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  top: 99%;
+  z-index: 1;
+  background: $colorWhite;
+  width: 624px;
+  overflow: hidden;
+  cursor: pointer;
+  &--hidden{
+    display: none;
+  }
+  &__text{
+    font-size: 16px;
+    color: $colorBlack;
+    margin-bottom: 6px;
+    pointer-events: none;
+  }
+  &__value{
+    font-size: 12px;
+    color: $colorGrey;
+    pointer-events: none;
+  }
+  &__item:first-child{
+    padding-bottom: 12px;
+    border: 1px solid transparent;
+    border-radius: 10px 10px 0 0;
+  }
+  &__item:last-child{
+    border-radius: 0 0 10px 10px;
+  }
+  &__item{
+    padding: 7px 18px;
+    border: 1px solid transparent;
+    border-top: 1px solid $colorMdGrey;
+    transition: background 0.2s linear;
+    overflow: hidden;
+    outline: none;
+    &--hidden{
+      display: none;
+    }
+    &:hover{
+      background-color: $colorGreyLight;
+    }
+    &:focus{
+      background-color: $colorPrimaryLightLight;
+      border-color: $colorPrimary;
+    }
+  }
+}

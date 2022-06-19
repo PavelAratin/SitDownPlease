@@ -1,0 +1,85 @@
+.cooperation{
+  &__title{
+    font-size: 32px;
+    color: $colorBlack;
+    font-weight: 400;
+    margin-bottom: 35px;
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 24px;
+    color: $colorBlack;
+    margin-bottom: 12px;
+  }
+  &__text{
+    font-size: 16px;
+    color: $colorGreyShade;
+    line-height: 1.8;
+    max-width: 842px;
+    &--padding{
+      padding-bottom: 12px;
+    }
+    &--layout{
+      padding: 0 0 12px 37px;
+      background-repeat: no-repeat;
+      background-size: 25px 25px;
+      background-position: left top;
+      max-width: 624px;
+      line-height: 1.5;
+      &-network{
+        background-image: url('../img/network.svg');
+      }
+      &-bag{
+        background-image: url('../img/bag.svg');
+      }
+      &-open{
+        background-image: url('../img/space-pic.svg');
+      }
+    }
+    &--layout2{
+      position: relative;
+      padding: 0 0 12px 26px;
+      &::after{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        color: $colorSecondary;
+        font-weight: 600;
+      }
+      &-1::after{
+        content: '1.';
+      }
+      &-2::after{
+        content: '2.';
+      }
+      &-3::after{
+        content: '3.';
+      }
+    }
+  }
+  &__box{
+    margin-bottom: 32px;
+  }
+  &__mini-title{
+    font-weight: 600;
+    font-size: 16px;
+    color: $colorSecondary;
+    margin-bottom: 12px;
+  }
+}
+.cooperation-warranty{
+  margin-bottom: 70px;
+  &__text{
+    font-size: 24px;
+    color: $colorBlack;
+    max-width: 624px;
+    padding:12px 0 12px 109px;
+    line-height: 1.5;
+    background-image: url('../img/carandash.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+}
