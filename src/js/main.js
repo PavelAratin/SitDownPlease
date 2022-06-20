@@ -1,5 +1,4 @@
 
-import { dropdownCategoryHeader } from "./dropdownCategoryHeader";
 import { mobileMenu } from "./mobileMenu";
 import { cardsTopRating } from "./cardsTopRating";
 import { getRangeSlider } from "./rangeSlider";
@@ -18,7 +17,6 @@ import { modalForm } from './modals';
 // import { searchInContacts } from './searchInContacts';
 
 window.addEventListener('DOMContentLoaded', function () {
-  dropdownCategoryHeader();
   mobileMenu();
   cardsTopRating();
 

@@ -363,6 +363,46 @@ input[type=number]{
   padding-bottom: 27px;
 }
 
+.choices--actions{
+  width: 300px;
+  background-color: $colorWhite;
+  padding: 14px 32px;
+  margin-right: 0;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid transparent;
+  margin-top: -1px;
+}
+.choices--actions .choices__placeholder{
+  opacity: 1;
+}
+.choices--actions #choices--js-actions-select-item-choice-2{
+  display: none;
+}
+.choices--actions .choices__list--dropdown{
+  width: 300px;
+  left: -2px;
+  top: 105%;
+  color: $colorBlack;
+
+}
+.choices--actions .choices__list--dropdown > .choices__list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.choices--actions[data-type*=select-one]::after{
+  right: 30px;
+}
+.choices--actions:focus{
+  border: 2px solid $colorPrimary;
+}
+.choices--actions.is-open .choices__list--dropdown,
+.choices--actions.is-open .choices__list[aria-expanded]{
+  border-top-color: transparent;
+  border-radius: 0 0 10px 10px;
+  padding: 22px 30px;
+  // border: 2px solid $colorGreyLight;
+}
+
 .baloon{
   width: 100%;
   &__item{

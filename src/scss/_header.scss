@@ -250,97 +250,11 @@
     height: 100%;
   }
 }
-.dropdown-category{
-  position: relative;
-  flex: 0 0 300px;
-  z-index: 100;
-  &__btn{
-    color: $colorPrimary;
-    font-size: 16px;
-    width: 100%;
-    padding: 17px 137px 17px 32px;
-    border: 2px solid transparent;
-    background-color: $colorWhite;
-    text-align: left;
-    background-image: url('../img/arrow-regions-down.svg');
-    background-repeat: no-repeat;
-    background-size: 13px 8px;
-    background-position: center right 10%;
-    border-radius: 0 10px 10px 0;
-    outline-color: $colorPrimary;
-    cursor: pointer;
-    &.active{
-      background-image: url('../img/arrow-regions-up.svg');
-    }
-    &:hover{
-      border-color: $colorPrimary;
-    }
-    &:focus:not(:hover){
-      outline-color: $colorPrimary;
-      background-color: $colorPrimaryLightLight;
-    }
-    &:active{
-      outline-color: $colorPrimaryShade;
-    }
-  }
-  &__wrapper{
-    position: absolute;
-    top: 95%;
-    left: -2px;
-    display: flex;
-    width: 101%;
-    border: 2px solid $colorGreyLight;
-    border-top: none;
-    border-radius: 0 0 10px 10px;
-    padding: 22px 30px;
-    z-index: -1;
-    background-color: $colorWhite;
-  }
-  &__list:not(:last-child){
-    margin-right: 30px;
-  }
-  &__item:not(:last-child){
-    margin-bottom: 10px;
-    color: $colorBlack;
-    font-size: 16px;
-  }
-  &__link{
-    position: relative;
-    outline: none;
-    transition: color 0.2s linear;
-    &:before{
-      content: '';
-      position: absolute;
-      top: -3px;
-      right: -3px;
-      bottom: -3px;
-      left: -3px;
-      background-color: $colorPrimaryLightLight;
-      transition: transform 0.2s linear;
-      transform: scale(0);
-    }
-    &:hover{
-      color: $colorPrimary;
-    }
-    &:focus:not(:active):before{
-      transform: scale(1);
-    }
-    &:active{
-      color: $colorPrimaryShade;
-    }
-  }
-  &__text{
-    position: relative;
-  }
-}
 .action-list{
     display: flex;
     align-items: center;
     position: relative;
     padding-top: 4px;
-    // &--768none{
-    //   display: none;
-    // }
   &__item:not(:last-child){
     margin-right: 41px;
   }
@@ -398,7 +312,4 @@
     left: -11px;
     top: 5px;
   }
-}
-.js-dropdown-category{
-  display: none;
 }

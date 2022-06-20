@@ -277,6 +277,9 @@
   .modal-swiper__min-swiper{
     width: calc(819 / 952 * 100%);
   }
+  .choices--actions{
+    margin-top: 0;
+  }
 }
 @media screen and(max-width:985px) {
   .container{
@@ -323,13 +326,6 @@
   .footer__lists{
     justify-content: space-between;
     width: 100%;
-  }
-  .dropdown-category{
-    flex: 0 0 189px;
-  }
-  .dropdown-category__btn{
-    padding-right: 71px;
-    background-position: center right 16%;
   }
   .header-form__btn{
     right: 221px;
@@ -500,6 +496,15 @@
   .contacts__input{
     width: 405px;
   }
+  .choices--actions .choices__list--dropdown{
+    top: 107%;
+  }
+  .choices--actions{
+    width: 189px;
+  }
+  .choices--actions .choices__list--dropdown {
+    left: -60%;
+  }
 }
 @media screen and (max-width:767px) {
   .container{
@@ -563,16 +568,6 @@
     width: 100%;
     left: 0;
     top: 50px;
-  }
-  .dropdown-category{
-    width: 100%;
-    flex: 0 0 57px;
-  }
-  .dropdown-category__btn{
-    border-radius: 10px;
-    border: 2px solid #F7F7F7;
-    padding-top: 19px;
-    background-position: center right 11%;
   }
   .hero__title{
     font-size: 20px;
@@ -1019,6 +1014,17 @@
   .dropdown-search{
     width: 100%;
     top: 107%;
+  }
+  .choices--actions{
+    width: 100%;
+    border: 2px solid #F7F7F7;
+    border-radius: 10px;
+    height: 60px;
+    overflow: visible
+  }
+  .choices--actions .choices__list--dropdown {
+    left: 0;
+    width: 100%;
   }
 }
 @media screen and(max-width:500px){
