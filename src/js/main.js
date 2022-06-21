@@ -89,13 +89,14 @@ let currentDataText;
 const dropdownSearch = document.querySelector('.js-dropdown-search');
 const contactsInput = document.querySelector('.js-contacts-input');
 function init(targetElement) {
-  let center = [55.753667434988856, 37.63577574600219];
-  map = new ymaps.Map('map', {
-    center: center,
-    zoom: 15
-  })
-  let placemark = new ymaps.Placemark(center, {
-    balloonContent: `
+  if (contactsInput) {
+    let center = [55.753667434988856, 37.63577574600219];
+    map = new ymaps.Map('map', {
+      center: center,
+      zoom: 15
+    })
+    let placemark = new ymaps.Placemark(center, {
+      balloonContent: `
         <div class="baloon js-baloon" data-baloon="soljanka">
             <ul class="baloon__list">
                 <li class="baloon__item">
@@ -112,14 +113,14 @@ function init(targetElement) {
             </ul>
         </div>
     `
-  }, {
-    iconLayout: 'default#image',
-    iconImageHref: '../img/map-mark.png',
-    iconImageSize: [32, 21],
-    iconImageOffset: [0, 0]
-  });
-  let placemark2 = new ymaps.Placemark([55.759086068985255, 37.6451055], {
-    balloonContent: `
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/map-mark.png',
+      iconImageSize: [32, 21],
+      iconImageOffset: [0, 0]
+    });
+    let placemark2 = new ymaps.Placemark([55.759086068985255, 37.6451055], {
+      balloonContent: `
         <div class="baloon js-baloon" data-baloon="pokrovka">
             <ul class="baloon__list">
                 <li class="baloon__item">
@@ -136,25 +137,26 @@ function init(targetElement) {
             </ul>
         </div>
     `
-  }, {
-    iconLayout: 'default#image',
-    iconImageHref: '../img/map-mark.png',
-    iconImageSize: [32, 21],
-    iconImageOffset: [0, 0]
-  });
-  map.controls.remove('searchControl'); // удаляем поиск
-  map.controls.remove('trafficControl'); // удаляем контроль трафика
-  map.controls.remove('typeSelector'); // удаляем тип
-  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-  map.controls.remove('rulerControl'); // удаляем контрол правил
-  map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-  map.geoObjects.add(placemark);
-  map.geoObjects.add(placemark2);
-  if(targetElement === 'soljanka'){
-    placemark.balloon.open()
-  }
-  if(targetElement === 'pokrovka'){
-    placemark2.balloon.open()
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/map-mark.png',
+      iconImageSize: [32, 21],
+      iconImageOffset: [0, 0]
+    });
+    map.controls.remove('searchControl'); // удаляем поиск
+    map.controls.remove('trafficControl'); // удаляем контроль трафика
+    map.controls.remove('typeSelector'); // удаляем тип
+    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    map.controls.remove('rulerControl'); // удаляем контрол правил
+    map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+    map.geoObjects.add(placemark);
+    map.geoObjects.add(placemark2);
+    if (targetElement === 'soljanka') {
+      placemark.balloon.open()
+    }
+    if (targetElement === 'pokrovka') {
+      placemark2.balloon.open()
+    }
   }
 }
 ymaps.ready(init)
@@ -187,14 +189,14 @@ function searchInContacts() {
         dropdownSearch.classList.add('dropdown-search--hidden');
       }
     });
-    dropdownSearch.addEventListener('click',function(e){
+    dropdownSearch.addEventListener('click', function (e) {
       currentDataText = e.target.dataset.baloonText
     });
   }
 }
 
 const searchForm = document.querySelector('.js-search-form');
-searchForm.addEventListener('submit',function(){
+searchForm.addEventListener('submit', function () {
   map.destroy();
   init(currentDataText);
   dropdownSearch.classList.add('dropdown-search--hidden');

@@ -15,7 +15,6 @@ export function customeSelect() {
   function changeTextOptions() {
     let startWindowWidth = window.innerWidth;
     if (startWindowWidth <= 985) {
-      console.log(document.querySelector('.choices--actions .choices__item').innerText)
       document.querySelector('.choices--actions .choices__item').innerText = 'Категория'
     } else {
       document.querySelector('.choices--actions .choices__item').innerText = 'Выбрать категорию'
@@ -23,8 +22,6 @@ export function customeSelect() {
   };
   changeTextOptions()
   window.addEventListener('resize', (e) => {
-    let startWindowWidth = window.innerWidth;
-    console.log(document.documentElement.clientWidth)
     if(document.documentElement.clientWidth <= 985){
       document.querySelector('.choices--actions .choices__item').innerText = 'Категория'
     } else {
